@@ -1,0 +1,17 @@
+table {
+	border: 1px solid silver;
+	font: Barlow;
+}
+td:hover {
+	background-color: bisque;
+	color: black;
+}
+/*td means data cell, tr means row, and th means header */
+tr, th {
+	background-color: #556B2F;
+	color: black;
+}
+tr, td {
+	background-color: darkgreen;
+	color: white;
+}
