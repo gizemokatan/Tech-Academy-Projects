@@ -25,8 +25,8 @@ h1 {
 /* ---------------------------------------------------
     SELECT ALL SQUARES IN THE ARRAY
 ------------------------------------------------------ */
-.container .square:nth-child(-n+4) {
-    background-image: url("../images/icons/smileyface2.png");
+.container .squares:nth-child(-n+4) {
+    background-image: url("./../images/icons/smileyface2.png");
     color: #fff;
     float: left;
     width: 100px;
@@ -36,23 +36,23 @@ h1 {
     border-radius: 25%;
     cursor: pointer;
     transition: transform .5s ease-in-out;
-    /* transition-property: ;
+}
+/* transition-property: ;
     transition-duration: ;
     transition-delay: ; in this order, this can all be summarized in the key value pair above */
-}
 /* pointer is the finger, not arrow */
+
 /* ---------------------------------------------------
      SELECT ALL SQUARES PARAGRAPHS IN THE ARRAY
  ----------------------------------------------------- */
 .squares:nth-child(-n+4) p{
     font-family: "Helvetica Neue", Helvetica, Arial, Helvetica, sans-serif;
-    font-size: 1.5px;
+    font-size: 1.5em;
     font-weight: 900;
     text-align: center;
     margin: 0;
     text-shadow: 2px 1px 4px rgba(0,0,0, 0.8);
 }
-
 /* ----------------------------------------------------
     INDIVIDUALLY SELECT A SQUARE IN THE ARRAY
 ---------------------------------------------------- */
@@ -71,8 +71,8 @@ h1 {
 /* ---------------------------------------------------------
     HOVER, TRANSLATE, & TRANSFORM EFFECTS
 ----------------------------------------------------------- */
-.container .square:nth-child(-n+4):hover {
-    background-image: url("../images/icons/smileyface1.png");
+.container .squares:nth-child(-n+4):hover {
+    background-image: url("./../images/icons/smileyface1.png");
     transform: scale(.5);
     animation-name: race;
     animation-duration: 2.5s;
@@ -90,4 +90,21 @@ h1 {
 }
 .squares:nth-child(4):hover {
     background: #77b800;
+}
+/* .button:hover {
+    background-color: #33fb14;
+    color: #fff;
+    cursor: pointer;
+} */
+/* -------------------------------------------------------
+    ANIMATION EFFECT
+--------------------------------------------------------- */
+@keyframes race {
+    0%, 100% {
+        transform: translateY(0px);
+        background-image: url("./../images/icons/smileyface1.png");
+    }
+    50% {
+        transform: translateY(330px);
+    }
 }
