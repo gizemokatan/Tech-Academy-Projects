@@ -98,12 +98,12 @@ section {
     margin-left: auto;
 }
 
-.container-fluid {
+/* .container-fluid {
     padding-right: 15px;
     padding-left: 15px;
     margin-right: auto;
     margin-left: auto;
-}
+} */
 
 .row {
     margin-right: -15px;
@@ -140,7 +140,7 @@ section {
     /* position: absolute; */ /* to the top edge of the screen */
     width: 100%;
     position: fixed;
-    z-index: 100%;
+    z-index: 1;
     background-color: rgba(255, 255, 255, 0.5);
 }
 
@@ -262,7 +262,7 @@ section {
     font-family: 'Raleway', sans-serif;
 }
 
-.reservation input [type="text"] {
+.reservation input[type="text"] {
     font-size: 15px;
     outline: none;
     font-weight: 600;
@@ -290,9 +290,13 @@ section {
 
 .terms {
     margin: 30px 1px 0 0;
+}
+
+.terms {
+    margin-top: 13% 1px 0 0;
     padding-left: 52px;
     font-size: 14px;
-    line-height: 5px;
+    line-height: 50px;
     color: #000000;
     cursor: pointer;
     font-family: 'Raleway', sans-serif;
@@ -345,26 +349,29 @@ section {
 /* ==========================================
     AMEDIA QUERIES
 ============================================ */
-/* @media all and (max-width:640px) and (min-width:381px) {
-    .head-main {
-        font-size: 28px;
+@media all and (max-width:640px) and (min-width:381px) {
+    .head-main { 
+        font-size: 28px ;
     }
 }
-
 @media all and (max-width:381px) and (min-width:200px) {
-    .head-main {
-        font-size: 24px;
+    .head-main { 
+        font-size: 24px ;
     }
 }
 
 @media (min-width: 768px) {
-    .container {
-        width: 750px;
-    }
+  .container {
+    width: 750px;
+  }
 }
-
 @media (min-width: 992px) {
-    .container {
-        width: 970px;
-    }
-} */
+  .container {
+    width: 970px;
+  }
+}
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
