@@ -1,0 +1,28 @@
+body {
+    background-color: lightblue;
+    color: darkblue;
+    text-align: center;
+}
+
+.vid-border {
+    border-style: dashed;
+    border-color: red;
+    border-width: 2px;
+    /* position: relative; */
+    height: fit-content;
+    width: fit-content;
+/* This is centering the image. */
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+/* This makes the img adjust to the size of the browser. */
+img {
+    height: auto;
+    max-width: 100%;
+}
+
+h3 {
+    text-align: center;
+}
