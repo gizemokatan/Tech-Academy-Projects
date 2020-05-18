@@ -188,19 +188,19 @@ form {
 	font-family: "Trebuchet MS", Optima;
 }
 
-/* Paragraph element hover effect */
+/* Paragraph hover effect */
 p:hover {
 	color: #00004d;
 }
 
-/* Image element hover effects */
+/* Image hover effects */
 img:hover {
 	filter: grayscale(5%);  /* Brings back most of the image color when hovered over */
     transition: transform 1s;
 	transform: scale(1.1);
 }
 
-/* Footer element */
+/* Footer */
 footer {
 	padding: 2%;
 	background-color:white;
