@@ -17,3 +17,8 @@ function division () {
     var divide = 48 / 6;
     document.getElementById("math4").innerHTML = "48 / 6 = " + divide;
 }
+
+function moreMath () {  //define and name a function that does multiple operations
+    var allOperaters = (1 + 2) * 10 / 2 - 5;
+    document.getElementById("math5").innerHTML = "1 plus 2, multiplied by 10, divided in half and then subtracted by 5 equals " + allOperaters;
+}
