@@ -42,3 +42,5 @@ g--;  //Decrement variable by 1
 document.writeln(g);
 
 window.alert(Math.random()); //Displays a random decimal number between 0 and 1
+
+document.writeln(Math.pow(8, 2)); //Displays the return of the value of 8 to the power of 2
