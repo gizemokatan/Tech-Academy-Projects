@@ -40,3 +40,5 @@ document.writeln(a);  //Display value of variable
 var g = 5; 
 g--;  //Decrement variable by 1
 document.writeln(g);
+
+window.alert(Math.random()); //Displays a random decimal number between 0 and 1
