@@ -27,3 +27,8 @@ function Mod() {
     var remainderOperator = 25 % 6;
     document.getElementById("math6").innerHTML = "The remainder of 25 divided by 6 is: " + remainderOperator;
 }
+
+function negationOp () {
+    var i = 10;
+    document.getElementById("math7").innerHTML = -i;
+}
