@@ -22,3 +22,8 @@ function moreMath () {  //define and name a function that does multiple operatio
     var allOperaters = (1 + 2) * 10 / 2 - 5;
     document.getElementById("math5").innerHTML = "1 plus 2, multiplied by 10, divided in half and then subtracted by 5 equals " + allOperaters;
 }
+
+function Mod() {
+    var remainderOperator = 25 % 6;
+    document.getElementById("math6").innerHTML = "The remainder of 25 divided by 6 is: " + remainderOperator;
+}
