@@ -33,10 +33,10 @@ function negationOp () { //Define and name a function that returns the opposite 
     document.getElementById("math7").innerHTML = -i;
 }
 
-var a = 5;
-a++;
-document.writeln(a);
+var a = 5; //Define a variable and give it a value
+a++;  //Increment variable by 1
+document.writeln(a);  //Display value of variable
 
-var g = 5;
-g--;
+var g = 5; 
+g--;  //Decrement variable by 1
 document.writeln(g);
