@@ -23,12 +23,20 @@ function moreMath () {  //define and name a function that does multiple operatio
     document.getElementById("math5").innerHTML = "1 plus 2, multiplied by 10, divided in half and then subtracted by 5 equals " + allOperaters;
 }
 
-function Mod() {
+function Mod() { //Define and name a function that will provide the remainder of a modulus expression
     var remainderOperator = 25 % 6;
     document.getElementById("math6").innerHTML = "The remainder of 25 divided by 6 is: " + remainderOperator;
 }
 
-function negationOp () {
+function negationOp () { //Define and name a function that returns the opposite or negative form of a variable's value
     var i = 10;
     document.getElementById("math7").innerHTML = -i;
 }
+
+var a = 5;
+a++;
+document.writeln(a);
+
+var g = 5;
+g--;
+document.writeln(g);
