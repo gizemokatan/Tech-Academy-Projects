@@ -9,3 +9,7 @@ function learnFunction() {
     sentence += " to be loved by you.";
     document.getElementById("learn").innerHTML = sentence
 }
+
+function changeText() {
+    document.getElementById("new_text").innerHTML = "GoodBye!";
+}
