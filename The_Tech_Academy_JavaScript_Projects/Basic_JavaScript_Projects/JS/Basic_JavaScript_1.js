@@ -1,15 +1,15 @@
 // pops up an alert window before viewing the page, 
 //  and prints the string in the body of the HTML
 
-// window.alert("Hello,world!");
-// document.write('Hello, world!');
+window.alert("Hello,world!");
+document.writeln('Hello, world!');
 
 
 // assigns a string to a variable, 
 //  and writes the value of the string in the body of the HTML
 
-// var a = "Come say Hi!";
-// document.write(a);
+var a = "Come say Hi!";
+document.writeln(a);
 
 
 
@@ -29,18 +29,18 @@
 // + "-Dr. Seuss");
 
 
-// Assign a concatenated string value to a variable
+// Assign string values to two variables and concatenate the variables together
 
-// var b = ("\"A spoonful of sugar helps the medicine go down,"
-// + " the medicine go down... \""
-// + "- Mary Poppins");
-// document.write(b)
+var b = ("\"A spoonful of sugar helps the medicine go down,"
++ " the medicine go down... \"");
+var c = "- Mary Poppins"
+document.writeln(b, c)
 
 
 // assign multiple variables in one statement and writes the selected variables value in the body of the HTML
 
 var Family = "The Smiths", Dad = "Tim", Mom = "Sue", Daughter = "Marian";
-document.write(Daughter);
+document.writeln(Daughter);
 
 
 // We created a variable that was a string called “green.” 
@@ -48,15 +48,15 @@ document.write(Daughter);
 
 var green = "Tim";
 var green = green.fontcolor("green");
-document.write(green);
+document.writeln(green);
 var purple = "Sue";
 var purple = purple.fontcolor("purple");
-document.write(purple);
+document.writeln(purple);
 var blue = "Marian";
 var blue = blue.fontcolor("blue");
-document.write(blue);
+document.writeln(blue);
 
 
 // set the value of an expression to a variable and wrote the variables output in the body of the HTML
 y = 3 + 3;
-document.write(y);
+document.writeln(y);
