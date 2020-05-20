@@ -1,6 +1,8 @@
 document.writeln(typeof 3)  //gives the type of the value
 document.writeln(typeof "song")
 
+document.write("<br>")
+
 function myFunction() {
     document.getElementById("test").innerHTML = 0/0;
 }
@@ -73,4 +75,33 @@ function Age3() {  //Return false by writing the same data type but a different 
     document.writeln(age === age1);
 }
 
+//new assignments below. assignments above were previously submitted for review
 
+
+document.write("<br>")  //this will start the next line of code on the line below in the HTML file
+
+document.write(5 > 2 && 10 > 4);  //Boolean logic AND operator that returns true
+
+document.write("<br>")
+
+document.write(5 > 10 && 10 > 4);  //Boolean logic AND operator that returns false
+
+document.write("<br>")
+
+document.write(5 > 10 || 10 > 4); //Boolean logic OR operator that returns true
+
+document.write("<br>")
+
+document.write(5 > 10 || 10 > 20);  //Boolean logic OR operator that returns false
+
+document.write("<br>")
+
+function notFunction() {
+    document.getElementById("not").innerHTML = !(20 > 10);  //Boolean logic NOT operator that returns false
+}
+
+document.write("<br>")
+
+function notFunction1() {
+    document.getElementById("not1").innerHTML = !(5 > 10);  //Boolean logic NOT operator that returns true
+}
