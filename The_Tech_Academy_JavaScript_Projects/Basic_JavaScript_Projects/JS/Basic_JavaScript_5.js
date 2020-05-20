@@ -32,3 +32,7 @@ function Bool1() {  //using Boolean logic to result False
 function mathOp() {
     console.log(2 + 2);
 }
+
+function newType() {
+    document.write("10" + 5);
+}
