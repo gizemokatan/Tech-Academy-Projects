@@ -65,3 +65,19 @@ function myFunction2() {
     "Mom has a " + Sassy.animal_age + " year old " 
     + Sassy.animal_sex + " " + Sassy.animal_breed + " " + Sassy.animal_species;
 }
+
+document.write("<br>")
+
+//Nested function example
+
+function nestedFunction() {  //Define and name a function
+    document.getElementById("nester").innerHTML = count();  //Display the result of the 'count' function 
+                                                            //on the HTML element with the 'nester' id
+    function count() {
+        var starting_num = 10;      //Define a variable with an identifier and give it a literal value
+        function plus_two() {starting_num += 2;}  //this is the nested function
+                                                    //this defines the function name and sets the variable to increment by +2
+        plus_two();
+        return starting_num;  //this outputs the result of the function 'plus_two
+    }
+}
