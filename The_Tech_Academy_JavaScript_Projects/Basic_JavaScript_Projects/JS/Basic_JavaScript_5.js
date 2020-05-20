@@ -1,4 +1,7 @@
 document.writeln(typeof 3)  //gives the type of the value
+
+document.write("<br>")
+
 document.writeln(typeof "song")
 
 document.write("<br>")
