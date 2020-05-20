@@ -40,3 +40,28 @@ function myFunction1() {
     "Courtney drives a " + Courtney.vehicle_color + " " + Courtney.vehicle_year
     + " " + Courtney.vehicle_make + " " + Courtney.vehicle_model;
 }
+
+//Reserved Word Example
+
+//var d = return;  //Doesn't display in browser- it expects an expression to be used 
+                    //since the word 'return' already means something in JS
+//document.write(d); //**Both the variable being defined and the write method, if not commented, wont allow the rest of the code to work
+
+document.write("<br>")
+
+//Object constructor challenge
+
+function animal(species, breed, age, sex) {  //make sure not to put a semi colon ' ; ' after the parenthesis of the parameters
+                                            // otherwise it will not be considered a class
+    this.animal_species = species;
+    this.animal_breed = breed;
+    this.animal_age = age;
+    this.animal_sex = sex;
+}
+var Sassy = new animal("Cat", "Calico", 5, "female");
+var Mike = new animal("Dog", "Golden Retriever", 1, "male");
+function myFunction2() {
+    document.getElementById("animals").innerHTML = 
+    "Mom has a " + Sassy.animal_age + " year old " 
+    + Sassy.animal_sex + " " + Sassy.animal_breed + " " + Sassy.animal_species;
+}
