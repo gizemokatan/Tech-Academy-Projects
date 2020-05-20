@@ -28,3 +28,7 @@ function Bool() {  //using Boolean logic to result True
 function Bool1() {  //using Boolean logic to result False
     document.writeln(10 < 2);
 }
+
+function mathOp() {
+    console.log(2 + 2);
+}
