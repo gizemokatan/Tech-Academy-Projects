@@ -33,6 +33,10 @@ function mathOp() {
     console.log(2 + 2);
 }
 
-function newType() {
+function newType() {  //converts the value to the type coercion it chooses
     document.write("10" + 5);
+}
+
+function BoolCon() {
+    console.log(2 > 3);
 }
