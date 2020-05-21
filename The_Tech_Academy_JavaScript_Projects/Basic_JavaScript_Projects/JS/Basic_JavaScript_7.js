@@ -58,3 +58,33 @@ function getDay() {
         document.getElementById("Weekday").innerHTML = "Happy Hump Day!"
     }
 }
+
+document.write("<br><br>")
+
+//else statement
+
+function ageFunction() {
+    age = document.getElementById("age").value;
+    if (age >= 18) {
+        vote = "You can vote!";
+    }
+    else {
+        vote = "You are not old enough to vote.";
+    }
+    document.getElementById("How_old").innerHTML = vote;
+}
+
+document.write("<br><br>")
+
+//if and else statements
+
+function birthYear() {  //Define and name a function
+    year = document.getElementById("yearBorn").value; //set a variable equal to the user input value
+    if (year <= 2015) {  //if branch will execute if the user inputs a year less than or equal to 2015, because this statement will be true
+        start_school = "You're child can start Elementary School!";  //this is the variable we made to be able to display the result
+    }
+    else {              //otherwise, if the user input is greater than year 2015, this else statement will be executed
+        start_school = "You're child is not old enough to start Elementary School.";  
+    }
+    document.getElementById("startSchool").innerHTML = start_school; //this dispalys the result in the HTML element with 'startSchool' id
+}
