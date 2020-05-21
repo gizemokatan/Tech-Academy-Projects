@@ -88,3 +88,27 @@ function birthYear() {  //Define and name a function
     }
     document.getElementById("startSchool").innerHTML = start_school; //this dispalys the result in the HTML element with 'startSchool' id
 }
+
+document.write("<br><br>")
+
+//Else if Example
+
+function timeFunction() {
+    var time = new Date().getHours; //Define variable named 'time' to use the getHours method to get the exact hour at the moment the button is clicked
+    var reply;
+    if (time < 12 == time > 0) { //if statement will execute the variable string below if the hour of the day is greater than 0 but less than 12
+        reply = "Good morning!"; //hours are recorded from 0 to 23
+    }
+    else if (time > 12 == time < 18) {  //else if statement will execute the variable string if the hour of the day is greater than 12 but less than 18
+        reply = "Good afternoon!";
+    }
+    else {
+        reply = "Good evening!";  //otherwise else will execute the variable string
+    }
+    document.getElementById("time_of_day").innerHTML = reply;  //Display the 'reply' depending on which statement gets executed
+                                                                // to the HTML element with 'time_of_day' id
+}
+
+document.write("<br><br>")
+
+
