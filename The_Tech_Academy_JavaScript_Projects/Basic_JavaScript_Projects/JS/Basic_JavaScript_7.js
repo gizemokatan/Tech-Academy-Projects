@@ -39,3 +39,22 @@ function addNums6() {
 }
 addNums5();
 addNums6();
+
+document.write("<br><br>")
+
+// if conditional statement
+
+function getDate() {
+    if (new Date().getHours() < 19) { //'if' is the branch and the rest is the conditional statement to be checked
+                                        // 19 stands for 7:00 pm; the computer lists hours as integers between 0 and 23
+        document.getElementById("Greeting").innerHTML = "How are you today?";
+    }
+}
+
+//Own if statement
+
+function getDay() {
+    if (new Date().getDay() == 3) {  // the weekdays start with Sunday as 0, therefore Wednesday is 3
+        document.getElementById("Weekday").innerHTML = "Happy Hump Day!"
+    }
+}
