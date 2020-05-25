@@ -111,3 +111,11 @@ it affects the rest of the code in the function scope */
 	}
     document.write("<br>" + x);
 }
+
+//return statement
+
+function returnFunction(name) {
+    return "Hello " + name;
+}
+var yup = returnFunction("Steve");
+document.getElementById("return_it").innerHTML = yup;
