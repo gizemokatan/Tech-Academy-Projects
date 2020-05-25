@@ -87,3 +87,27 @@ function constantFunction() {
     document.getElementById("constant").innerHTML = " The " + musical_instruments.type +
     " is in the " + musical_instruments.family + " family of instruments.";
 }
+
+//Let keyword
+
+function letFunction() {
+    var x = 82;
+    document.write(x);
+    {
+        let x = 33;
+        document.write("<br>" + x);
+    }
+    document.write("<br>" + x);
+}
+
+function letFunction1() {
+var x = 82;
+	document.write(x);
+	{
+/*The var keyword in this block of code doesnt have block scope
+it affects the rest of the code in the function scope */
+		var x = 33;
+		document.write("<br>" + x);
+	}
+    document.write("<br>" + x);
+}
