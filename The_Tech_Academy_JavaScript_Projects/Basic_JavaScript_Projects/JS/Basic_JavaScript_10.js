@@ -45,3 +45,45 @@ content will be equal to content plus position of 'y' in instruments.
     }
     document.getElementById("list_of_instruments").innerHTML = content;
 }
+
+//Arrays are objects- listed in the object data type
+
+function catPics() {
+
+//catPicture is the object
+    var catPicture = [];
+
+//there are 3 indexes and properties for each
+    catPicture[0] = "sleeping";
+    catPicture[1] = "playing";
+    catPicture[2] = "eating";
+    document.getElementById("cat").innerHTML = "In this picture, the cat is " +
+    catPicture[2] + ".";
+}
+
+//Array 
+
+function array_Function() {
+    var teas = [];
+    teas[0] = "Green tea";
+    teas[1] = "Black tea";
+    teas[2] = "Roobios tea";
+    document.getElementById("array").innerHTML = "I like to drink " +
+    teas[0] + ".";
+}
+
+//Constant keyword
+
+function constantFunction() {
+
+//create an object using const keyword and define properties with values
+    const musical_instruments = {type: "Violin", family: "string", brand: "Fender", color: "black"};
+    musical_instruments.color = "blue";
+    musical_instruments.price = "$900";
+    // document.getElementById("constant").innerHTML = "The cost of the " +
+    // musical_instruments.color + " " + musical_instruments.type + " was " + musical_instruments.price + ".";
+
+    //display a string that includes the added property value and the changed property value
+    document.getElementById("constant").innerHTML = " The " + musical_instruments.type +
+    " is in the " + musical_instruments.family + " family of instruments.";
+}
