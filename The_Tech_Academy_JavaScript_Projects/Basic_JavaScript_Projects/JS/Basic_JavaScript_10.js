@@ -119,3 +119,51 @@ function returnFunction(name) {
 }
 var yup = returnFunction("Steve");
 document.getElementById("return_it").innerHTML = yup;
+
+
+//objects with property and method
+
+let car = {
+    make: "Hyundai",
+    model: "Sonata",
+    year: "2007",
+    color: "navy",
+    description: function() {
+        return "The car is a " + this.year + " " + this.color + " " + this.make + " " + this.model;
+    }
+}
+document.getElementById("car_object").innerHTML = car.description();
+
+//break statement
+
+function breakFunction() {
+var text = "";
+var i ;
+
+/*variable i is initially zero, and the condition to be checked 
+is i is less than 10, if true, text will equal text plus i.
+In the for loop, if i equals to 3, break the loop and 
+continue executing the code after the loop.*/
+for (i = 0; i < 10; i++) {
+    if (i === 3) {break; }
+    text += i + "<br>";
+}
+document.getElementById("loop").innerHTML = text;
+}
+
+//continue statement
+
+function contiFunction() {
+    var text1 = "";
+    var e;
+
+/* variable e is initially zero and the condition to be checked
+is e less than 10, if true, text will equal text plus e.
+In the for loop, if e equals to 3, skip this step and continue
+ with the next iteration in the loop.*/
+    for (e = 0; e < 10; e++) {
+        if (e === 3) {continue; }
+        text1 += e + "<br>";
+    }
+    document.getElementById("continue").innerHTML = text1;
+}
