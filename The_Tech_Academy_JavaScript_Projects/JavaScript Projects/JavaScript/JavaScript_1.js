@@ -33,3 +33,9 @@ function flavorFunction() {
     }
     document.getElementById("output").innerHTML = flavor_output;
 }
+
+//get elements by class name
+function HWfunction() {
+    var a = document.getElementsByClassName("click");
+    a[0].innerHTML = "It's not magic!";
+}
