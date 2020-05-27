@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array.some() Method</title>
+</head>
+<body>
+    <h1>Array.some() Method:</h1>
+    <p id="age"></p>
+   
+    <!-- <script>
+        var ages = [2, 9, 16, 19, 25];
+        var over18 = ages.some(ageFunction);
+
+        document.getElementById("age").innerHTML = "Some over 18 is " + over18;
+
+        function ageFunction(value, index, array) {
+            return value > 18;
+        }
+    </script> -->
+    <!-- Using arrow function -->
+    <script>
+        var ages = [2, 9, 16, 19, 25];
+
+    //This is a variable that has a function within, which makes it a callback function.
+        ageFunction = (value, index, array) => value >= 18;
+
+        //The .some() method takes in a callback function and stores it in a variable.
+        var over18 = ages.some(ageFunction);
+        document.getElementById("age").innerHTML = over18;
+    </script>
+</body>
+</html>
