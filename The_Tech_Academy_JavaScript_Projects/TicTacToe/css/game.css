@@ -20,7 +20,7 @@ td {
     over td elements. */
     cursor: pointer;
     /* This property sets our table border style. */
-    border: 4px solid rgba(64, 223, 49, 0.8);
+    border: 4px solid rgba(223, 49, 122, 0.8);
     /* This property removed default padding. */
     padding: 0px;
     width: 200px;
