@@ -12,6 +12,10 @@ const Calculator = {
 
 // This modifies values each time a button is clicked.
 function Input_Digit(digit) {
+    // NOTE: The Calculator object, which has properties {Display_Value, First_Operand, etc.} 
+    // is unpacking properties from the Calculator object.
+    // NOTE: This line is using "Destructuring Assignment" to unpack properties from objects. 
+    // It virtually defines Display_Value and Wait_Second_Operand to be used in this function.
     const { Display_Value, Wait_Second_Operand } = Calculator;
     // Checking to see if Wait_Second_Operand is true and set Display_Value to the key that was clicked.
     if (Wait_Second_Operand === true) {
