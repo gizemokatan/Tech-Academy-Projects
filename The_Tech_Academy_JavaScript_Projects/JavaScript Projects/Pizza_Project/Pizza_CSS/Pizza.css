@@ -5,6 +5,7 @@
 }
 
 #frmMenu {
+    /* changed width and height to fit vegetable div in line. */
     width: 600px;
     height: 300px;
 }
@@ -22,6 +23,7 @@
     float: left;
 }
 
+/* Added center class for meat div to be centered. */
 .center {
     width: 200px;
     height: 200px;
@@ -37,7 +39,8 @@
 #showText {
     width: 200px;
     height: 190px;
-    margin: 0 auto;
+    /* changed margin top to align with totalPrice div. */
+    margin: 50px 0 0 0;
     float: left;
 }
 

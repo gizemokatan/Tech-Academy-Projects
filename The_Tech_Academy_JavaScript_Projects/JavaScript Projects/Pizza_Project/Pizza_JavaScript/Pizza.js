@@ -28,7 +28,6 @@ function getReceipt() {
     console.log("size text1: "+text1);
     console.log("subtotal: $"+runningTotal+".00");
     // These variables will be passed on to each function.
-    // getVegetables(runningTotal,text1);
     getToppings(runningTotal,text1);
 };
 
@@ -57,26 +56,3 @@ function getToppings(runningTotal, text1) {
     document.getElementById("showText").innerHTML=text1;
     document.getElementById("totalPrice").innerHTML = "<h3>Total: <strong>$"+runningTotal+".00"+"</strong></h3>";
 };
-
-// function getVegetables(runningTotal, text1) {
-//     var vegTotal = 0;
-//     var selectedVeg = [];
-//     var vegArray = document.getElementsByClassName("veggies");
-//     for (var k = 0; k < vegArray.length; k++) {
-//         if (vegArray[k].checked) {
-//             selectedVeg.push(vegArray[k].value);
-//             console.log("selected vegetable items: ("+vegArray[k].value+")");
-//             text1 = text1+vegArray[k].value+"<br>";
-//         }
-//     }
-//     var vegCount = selectedVeg.length;
-//     if (vegCount > 0) {
-//         vegTotal = (vegCount);
-//     } else {
-//         vegTotal = 0;
-//     }
-//     runningTotal = (runningTotal + vegCount);
-//     console.log("total selected vegetable items: "+vegCount);
-//     console.log(vegCount+" vegetable = $"+vegTotal+".00");
-//     console.log("vegetable text1:"+text1);
-// };
