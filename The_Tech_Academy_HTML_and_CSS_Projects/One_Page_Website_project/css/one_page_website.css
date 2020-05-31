@@ -1,204 +1,224 @@
 body {
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    /* This gives all sides of the body margin of 20px. */
-    margin: 20px 20px 20px 20px;
-    /* The title gets covered by the nav bar wrap, so we added padding to 
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  /* This gives all sides of the body margin of 20px. */
+  margin: 20px 20px 20px 20px;
+  /* The title gets covered by the nav bar wrap, so we added padding to 
     the top only to be able to show the heading content.  */
-    padding-top: 20px;
-    text-align: center;
-  }
-
-  /* Centers 'row' and  'column' classes. */
-  .center {
-    margin: auto;
-    padding-left: 20%;
-  }
-  
- * {
-    box-sizing: border-box;
-  }
-/* This allows the child element to inherit properties from the parent element. */
-  .row > .column {
-    padding: 0 8px;
-    
-    
-  }
-  
-  .row:after {
-    content: "";
-    display: table;
-    clear: both;
+  padding-top: 20px;
 }
-  
-  .column {
-    float: left;
-    width: 25%;
+
+#home,
+#member {
+  padding-top: 30px;
+}
+
+.center-entire-page {
+  text-align: center;
+}
+
+/* Centers 'row' and  'column' classes. */
+.center {
+  margin: auto;
+  padding-left: 20%;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* This allows the child element to inherit properties from the parent element. */
+.row>.column {
+  padding: 0 8px;
+
+
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.column {
+  float: left;
+  width: 25%;
 }
 
 .nav {
-    /* This makes sure no content in the nav bar goes beyond the size of the nav bar,
+  /* This makes sure no content in the nav bar goes beyond the size of the nav bar,
     for instance and image that is larger in size than the nav bar will get cut off
     where the nav bar ends.  */
-    overflow: hidden;
-    top: 0;
-    left: 0;
-    text-align: center;
-    background-color: rgb(124, 16, 40);
-    /* This keeps the nav bar in place when scrolling. */
-    position: fixed;
-    /* This brings the nav bar to the front of other content.*/
-    z-index: 1;
-    /* This makes the nav bar take up the entire width of the page
+  overflow: hidden;
+  top: 0;
+  left: 0;
+  text-align: center;
+  background-color: rgb(124, 16, 40);
+  /* This keeps the nav bar in place when scrolling. */
+  position: fixed;
+  /* This brings the nav bar to the front of other content.*/
+  z-index: 1;
+  /* This makes the nav bar take up the entire width of the page
     regardless of how its sized. */
-    width: 100%;
+  width: 100%;
 }
 
 ul {
-    /* This gets rid of the bullet points of a list.*/
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-  }
+  /* This gets rid of the bullet points of a list.*/
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
 
-  li {
-    float: left;
-  }
+li {
+  float: left;
+}
 
 li a {
-    display: block;
-    padding: 8px;
-    color: whitesmoke;
-    font-size: 16px;
+  display: block;
+  padding: 8px;
+  color: whitesmoke;
+  font-size: 16px;
 }
 
 h1 {
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: x-large;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: x-large;
 }
 
 input[type="text"] {
-    width: 50%;
-    margin: 12px 0;
-    border-color: rgb(226, 43, 98);
-    border-radius: 3px;
+  width: 50%;
+  margin: 12px 0;
+  border-color: rgb(226, 43, 98);
+  border-radius: 3px;
 }
 
-  /* The Modal (background) */
-  .modal {
-    display: none;
-    position: fixed;
-    z-index: 1;
-    padding-top: 100px;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    overflow: auto;
-    background-color: black;
-  }
-  
-  /* Modal Content */
-  .modal-content {
-    position: relative;
-    background-color: #fefefe;
-    margin: auto;
-    padding: 0;
-    width: 90%;
-    max-width: 1200px;
-  }
-  
-  /* The Close Button */
-  .close {
-    color: white;
-    position: absolute;
-    top: 10px;
-    right: 25px;
-    font-size: 35px;
-    font-weight: bold;
-  }
-  
-  /* :focus for example is when you have a textbox and you click on it, 
-  it means its focused. */
-  .close:hover,
-  .close:focus {
-    color: #999;
-    text-decoration: none;
-    cursor: pointer;
-  }
+/* The Modal (background) */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: black;
+}
 
-  .mySlides {
-    display: none;
-  }
-  
-  .cursor {
-    cursor: pointer;
-  }
-  
-  /* Next & previous buttons */
-  .prev,
-  .next {
-    cursor: pointer;
-    position: absolute;
-    top: 50%;
-    width: auto;
-    padding: 16px;
-    margin-top: -50px;
-    color: white;
-    font-weight: bold;
-    font-size: 20px;
-    transition: 0.6s ease;
-    border-radius: 0 3px 3px 0;
-    user-select: none;
-    /* This makes sure its compatible with multiple browsers. */
-    -webkit-user-select: none;
-  }
-  
-  /* Position the "next button" to the right */
-  .next {
-    right: 0;
-    border-radius: 3px 0 0 3px;
-  }
-  
-  /* On hover, add a black background color with a little bit see-through */
-  .prev:hover,
-  .next:hover {
-    background-color: rgba(0, 0, 0, 0.8);
-  }
-  
-  /* Number text (1/3 etc) */
-  .numbertext {
-    color: #f2f2f2;
-    font-size: 12px;
-    padding: 8px 12px;
-    position: absolute;
-    top: 0;
-  }
-  
-  img {
-    margin-bottom: -4px;
-  }
-  
-  .caption-container {
-    text-align: center;
-    background-color: black;
-    padding: 2px 16px;
-    color: white;
-  }
-  
-  .image {
-    opacity: 0.6;
-  }
-  
-  .active,
-  .image:hover {
-    opacity: 1;
-  }
-  
-  img.hover-shadow {
-    transition: 0.3s;
-  }
-  
-  .hover-shadow:hover {
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  }
+/* Modal Content */
+.modal-content {
+  position: relative;
+  background-color: #fefefe;
+  margin: auto;
+  padding: 0;
+  width: 90%;
+  max-width: 1200px;
+}
+
+/* The Close Button */
+.close {
+  color: white;
+  position: absolute;
+  top: 10px;
+  right: 25px;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+/* :focus for example is when you have a textbox and you click on it, 
+  it means its focused. */
+.close:hover,
+.close:focus {
+  color: #999;
+  text-decoration: none;
+  cursor: wait;
+}
+
+.mySlides {
+  display: none;
+}
+
+.cursor {
+  cursor: pointer;
+}
+
+.slide-text {
+  color: #fff9fa;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 20px;
+  width: 100%;
+  text-align: center;
+  background-color: rgba(1, 1, 10, 0.76);
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  /* This makes sure its compatible with multiple browsers. */
+  -webkit-user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+img {
+  margin-bottom: -4px;
+}
+
+.caption-container {
+  text-align: center;
+  background-color: black;
+  padding: 2px 16px;
+  color: white;
+}
+
+.image {
+  opacity: 0.6;
+}
+
+.active,
+.image:hover {
+  opacity: 1;
+}
+
+img.hover-shadow {
+  transition: 0.3s;
+}
+
+.hover-shadow:hover {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
