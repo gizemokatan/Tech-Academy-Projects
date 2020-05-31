@@ -4,34 +4,96 @@
 		<title>Book Club Babes | BCB</title>
 		<meta charset="utf-8">
 		<link rel="stylesheet" href="./css/one_page_website.css">
+		<script src="./js/one_page_website.js" defer></script>
 	</head>
 	<body>
 		<!--- NAV --->
-			<div>
-				<ul>
-					<a href="#home" id="link"><li>HOME</li></a>
-					<a href="#member"><li>MEMBER</li></a>
-				</ul>
+			<div class="nav-bar-wrap">
+				<div class="nav">
+					<ul>
+						<li><a href="#home">HOME</a></li>
+						<li><a href="#member">MEMBER</a></li>
+					</ul>
+				</div>
 			</div>
 		<!--- END NAV --->
-		
+			<div>
+
+			</div>
 		<!--- HOME --->
-			<div class="home">
+			<div id="home" >
 				<h1>Welcome to our Book Club!</h1>
-				<div>
-					<img src="./img/thumbnail_3.jpg" width="360" height="255" alt="Drawing of three women with open books chatting." />
+				<div class="center">
+					<div class="row">
+						<div class="column">
+							<img src="./img/thumbnail_3.jpg" style="width: 100%" class="hover-shadow cursor" 
+							onclick="openModal();currentSlide(1)"/>
+						</div>
+						<div class="column">
+							<img src="./img/thumbnail_6.jpg" style="width: 100%" class="hover-shadow cursor" 
+							onclick="openModal();currentSlide(2)"/>
+						</div>
+						<div class="column">
+							<img src="./img/thumbnail_4.jpg" style="width: 100%" class="hover-shadow cursor" 
+							onclick="openModal();currentSlide(3)"/>
+						</div>
+					</div>
 				</div>
-					<p>
-						This is a group of book loving ladies from NYC.<br>
-						If you're looking for another type of 'babe' go someplace else!
-					</p>
-					<p>
-						Book club members can join our network AKA our sisterhood and participate in weekly reading circles and discussions.</p>
-					<p>
-						If you're interested in joining the club, please fill out our <a href="#form" id="link">form</a>.
-					</p>
 			</div>
 		<!--- END HOME --->
+
+		<!-- MODAL SECTION -->
+			<div id="myModal" class="modal">
+				<span class="close cursor" onclick="closeModal()">&times;</span>
+				<div class="modal-content">
+
+					<div class="mySlides">
+						<div class="numbertext">1 / 3</div>
+						<img src="./img/thumbnail_3.jpg" style="width: 100%">
+					</div>
+
+					<div class="mySlides">
+						<div class="numbertext">2 / 3</div>
+						<img src="./img/thumbnail_6.jpg" style="width: 100%">
+					</div>
+
+					<div class="mySlides">
+						<div class="numbertext">3 / 3</div>
+						<img src="./img/thumbnail_4.jpg" style="width: 100%">
+					</div>
+
+					<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+					<a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+					<div class="capation-container">
+						<p id="caption"></p>
+					</div>
+
+					<div class="column">
+						<img class="image cursor" src="./img/thumbnail_3.jpg" style="width: 100%"
+						onclick="currentSlide(1)" alt="Book Club Babes">
+					</div>
+					<div class="column">
+						<img class="image cursor" src="./img/thumbnail_6.jpg" style="width: 100%"
+						onclick="currentSlide(2)" alt="Book Club Babes">
+					</div>
+					<div class="column">
+						<img class="image cursor" src="./img/thumbnail_4.jpg" style="width: 100%"
+						onclick="currentSlide(3)" alt="Book Club Babes">
+					</div>
+				</div>
+			</div>
+			<div>
+				<p>
+					This is a group of book loving ladies from NYC.<br>
+					If you're looking for another type of 'babe' go someplace else!
+				</p>
+				<p>
+					Book club members can join our network AKA our sisterhood and participate in weekly reading circles and discussions.</p>
+				<p>
+					If you're interested in joining the club, please fill out our form</a>.
+				</p>
+			</div>
 		
 		<!--- VID --->
 		<section>
@@ -51,7 +113,7 @@
 		
 		<!--- FORM --->
 		<section>
-			<div class="member">
+			<div id="member">
 				<h2>~Membership~</h2>
 				<div>
 					<img src="./img/thumbnail_5.jpg" width="360" height="255" alt="Colorful books shelved with tea cups." />
