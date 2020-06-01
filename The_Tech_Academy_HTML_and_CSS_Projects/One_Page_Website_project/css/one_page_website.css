@@ -133,7 +133,7 @@ input[type="text"] {
 .close:focus {
   color: #999;
   text-decoration: none;
-  cursor: wait;
+  cursor: pointer;
 }
 
 .mySlides {
