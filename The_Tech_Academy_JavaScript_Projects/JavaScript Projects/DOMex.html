@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM ex</title>
+</head>
+<body>
+    <h2>DOM fullscreenEnabled() Method:</h2>
+    <P><button onclick="fullScreen();">Open Video in Fullscreen Mode</button></P>
+
+    <video width="50%" controls id="rain">
+        <source src="rain.mp4" type="video/mp4">
+        <source src="rain.ogg" type="video/ogg">
+    </video>
+
+    <script>
+        // Get the element you want displayed in fullscreen.
+        var elem = document.getElementById("rain");
+
+        // Function to open fullscreen mode.
+        function fullScreen() {
+            // If fullscreen mode is not available, show the element in fullscreen.
+            if (
+                document.fullscreenEnabled ||
+                document.webkitFullscreenEnabled || /* Chrome, Safari & Opera */
+                document.mozFullScreenEnabled || /* Firefox */
+                document.msFullscreenEnabled /* IE/Edge */
+             ) {
+
+                //  Show the element in fullscreen.
+                elem.webkitRequestFullscreen();
+            if (elem.requestFullscreen) {
+                elem.requestFullscreen();
+            } else if (elem.mozRequestFullScreen) { /* Firefox */
+                elem.mozRequestFullScreen();
+            } else if (elem.webkitRequestFullscreen) { /* Chrome, Safari & Opera */
+                elem.webkitRequestFullscreen();
+            } else if (elem.msRequestFullscreen) { /* IE/Edge */
+                elem.msRequestFullscreen();
+            }
+
+            }
+        } 
+    </script>
+
+</body>
+</html>
