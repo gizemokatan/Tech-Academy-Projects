@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery Demo</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"></script>
+</head>
+<body>
+    <!-- jQuery is shortened syntax that is pointing to 
+    an actual repository of JS code thats already prewritten 
+    to quickly harness those effects using the API call instead 
+    of having to write out hundreds of lines of JS code. -->
+
+    <input id="whichkey" value="click here">
+    <div id="log"></div>
+
+    <script>
+    // $ is the shorthand to use instead of typing 'jQuery'
+    // targeting the DOMs body element 
+    // .after() or any method means 'do something'
+    // as the document is loading request somehting gets done to the html tag
+    /* When the page is loaded in the browser, run this function; grab the 
+    html tag and append the following info inside it to the page. */
+    $(document).ready(function() {
+        $("html").append(
+            "<body>\
+                <div id='container'>\
+                    <div id='inner'>\
+                        <h1>Basic jQuery</h1>\
+                        <p id='1'>Paragraph 1</p>\
+                        <p id='2'>Paragraph 2</p>\
+                        <p id='3'>Paragraph 3</p>\
+                    </div>\
+                </div>\
+            </body>"
+        );
+        // Property is 'color' and attribute is 'red'
+        // Target the p tag and go to the CSS and change the color property to red.
+        // Can not break the string of double quotes, so we must use single quote '' to not break it.
+        // can target specific p tag using id attribute.
+        $("#2").css({"color":"red"});
+
+        // When the user clicks on paragraph 3, we will target the header and hide it.
+        $("#3").click(function() {
+            $('h1').hide();
+        });
+
+        // jQuery event 
+        /* When the user clicks on the mouse, the mouse left or right 
+        button will log which mouse button was depressed. */
+        $("#whichkey").on("mousedown", function(event) {
+            $("#log").html(event.type + ": " + event.which);
+        });
+
+        // jQuery effects
+        // When the user clicks on paragraph 3, we will slowly hide the input box.
+        $("#1").click(function() {
+            $("#whichkey").hide("slow");
+        });
+
+    });
+    </script>
+</body>
+</html>
