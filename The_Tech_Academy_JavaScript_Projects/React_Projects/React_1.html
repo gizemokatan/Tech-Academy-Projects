@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="./react.js"></script>
+    <script src="./react-dom.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>React Timer</title>
+</head>
+<body>
+    <!-- created a timer that counts upward -->
+    <!-- This is all JavaScript, calling built in React methods -->
+    <div id="My_React_Code"></div>
+    <script>
+        // This creates a component class and stores it as a variable called counter.
+        var counter = React.createClass({
+            render: function() {
+                var time_Passed = Math.round(this.props.time_Passed / 100);
+                // get the ramainder of the equation and if its a whole number, make it appear 
+                // as a whole number ' ' else, make it as a decimal '.0'
+                var seconds_Passed = time_Passed / 10 + (time_Passed % 10 ? '' : '.0' );
+                var text = 'My React code started running ' +
+                    seconds_Passed + ' seconds ago!';
+                    // This is like document.getElementById, its displaying it to the screen via React
+                    // dynamically renders a p tag in the DOM and puts the text there.
+                return React.DOM.p(null, text);
+            }
+        });
+
+        // React.createFactory is a function that generates a factory (object that can create other objects)
+        // This variable inherits the properties of var counter class
+        var counter_Factory = React.createFactory(counter);
+
+        // This is how the timer knows how much time has passed.
+        var start_counting = new Date().getTime();
+        setInterval(function() {
+            // Used to render a React component or components.
+            ReactDOM.render(
+                counter_Factory({time_Passed: new Date().getTime() - start_counting}),
+                document.getElementById("My_React_Code")
+            );
+        }, 50);
+    </script>
+</body>
+</html>
