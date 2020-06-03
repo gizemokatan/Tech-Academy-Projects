@@ -12,7 +12,7 @@ function closeForm() {
     document.getElementById("animalForm").style.display = "none";
 }
 
-// Added jQuery to 
+// Added jQuery
 $("#slideshow > div:gt(0)").hide();
 
 setInterval(function() {
