@@ -1,5 +1,17 @@
 /* Styling a contact form */
 
+/* Added body opacity and transition for all elements to appear. */
+body {
+    opacity: 1;
+    transition: 1s opacity;
+}
+
+/* Added .fade-out so body will fade in all elements. */
+body.fade-out {
+    opacity: 0;
+    transition: none;
+}
+
 div {
     border-radius: 5px;
     background-color: rgb(226, 209, 209);

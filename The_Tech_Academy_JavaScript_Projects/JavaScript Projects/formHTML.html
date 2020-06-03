@@ -4,10 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact form</title>
-    <link rel="stylesheet" href="CSS/CSS_1.css"/>
-    <script src="JavaScript/JavaScript_2.js" defer></script>
+    <link rel="stylesheet" href="./CSS/formCSS.css"/>
+    <script src="./JavaScript/form.js" defer></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"></script>
 </head>
 <body>
+    <!-- Adding the fade-out class as soon as the page loads. -->
+    <script>document.body.className += ' fade-out';</script>
+    <!-- Using jQuery to remove the fade-out class from the body once the page is loaded. -->
+    <script>
+        $(function() {
+        $('body').removeClass('fade-out');
+    });
+    </script>
     <h3>HTML Form</h3>
     <div>
         <form name="myForm" action="" onsubmit="validateForm()" method="post">
@@ -22,5 +31,11 @@
             <input type="submit" value="Submit">
         </form>
     </div>
+    <!-- jQuery will remove the fade-out class once the page is loaded. -->
+    <script>
+        $(function() {
+            $('body').removeClass('fade-out');
+        });
+    </script>
 </body>
 </html>
