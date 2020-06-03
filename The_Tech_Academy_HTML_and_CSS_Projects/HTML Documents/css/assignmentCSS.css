@@ -1,0 +1,17 @@
+.squareMoves {
+    width: 500px;
+    height: 8px;
+    background: rgb(141, 214, 46);
+    position: absolute;
+    /* must define animation here; name, duration, etc. */
+    /* animation: liner creates the movement from left to right */
+    animation: linear infinite alternate;
+    animation-name: squareMoves;
+    animation-duration: 1s;
+}
+/* This is where the animation name is called */
+@keyframes squareMoves {
+    0% { left: 0;}
+    100% { left: 6%;}
+    
+}
