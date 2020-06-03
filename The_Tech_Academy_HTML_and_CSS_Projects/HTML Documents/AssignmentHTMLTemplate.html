@@ -4,6 +4,7 @@
 		<title>Traveling With Purpose</title>
 		<meta charset="utf-8">
 		<link rel="stylesheet" href="./css/assignmentCSS.css"/>
+		<script src="./js/assignmentJS.js"></script>
 	</head>
 	<body>
 	<nav>
@@ -20,8 +21,35 @@
 				That is the price you pay for the richness of loving and knowing people in more than one place" by Miriam Adeney
 			</blockquote>
 			</p>
-	<p><h3>What's it like to live and work abroad?</h3></p>
-	<p>I'm here to tell you about my experience living abroad.</p>
+
+	<!-- Added a div class for CSS styling a sticky button popup form. -->
+	<div class="sticky">
+		<div class="stickyForm">
+			<!-- Add a popup form. -->
+			<button class="open-button" onclick="openForm()"><h3><b>What's it like to live and work abroad!? Click here to contact me.</h3></button>
+			<div class="form-popup" id="contactForm">
+				<form action="/action_page.php" class="form-container">
+					<h1>Let's connect!</h1>
+					<h5>Feel free to reach out and ask me any questions you may have
+						about teaching, traveling, or living in SE Asia.
+						I would love to connect with you!
+					</h5>
+					<label for="first-name"><b>First Name:</b></label>
+					<input type="text" name="first-name" placeholder="Your first name..." required>
+	
+					<label for="email"><b>Email:</b></label>
+					<input type="text" name="email" placeholder="Your email..." required>
+	
+					<label for="message"><b>Message:</b></label>
+					<input type="text" name="message" placeholder="Your message...">
+		
+					<button type="submit" class="btn">Submit</button>
+					<button type="submit" class="btn cancel" onclick="closeForm()">Close</button>
+				</form>
+			</div>
+		</div>
+	</div>
+	<br>
 		<main>
 			<h1>Teaching English in Indonesia</h1>
 				<!-- Added a clickable image that links to another webpage -->
