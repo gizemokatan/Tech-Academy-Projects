@@ -22,6 +22,7 @@
 //     }
 // }
 
+// Form Validation to create an alert window.
 var list_of_empty_fields = [];
 function validateForm() {
     var field = document.getElementsByClassName("field");
