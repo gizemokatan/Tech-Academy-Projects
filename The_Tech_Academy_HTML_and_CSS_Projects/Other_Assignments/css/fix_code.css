@@ -1,7 +1,16 @@
+/* Added body opacity and transition for all elements to appear. */
 body {
     background-color: lightblue;
     color: darkblue;
     text-align: center;
+    opacity: 1;
+    transition: 1s opacity;
+}
+
+/* Added .fade-out so body will fade in all elements. */
+body.fade-out {
+    opacity: 0;
+    transition: none;
 }
 
 .vid-border {
