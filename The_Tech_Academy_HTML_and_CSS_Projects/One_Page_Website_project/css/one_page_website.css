@@ -1,3 +1,9 @@
+/* Add smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+
 body {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   /* This gives all sides of the body margin of 20px. */
