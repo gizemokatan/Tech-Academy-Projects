@@ -1,37 +1,55 @@
 <!DOCTYPE html>
 <html>
 
-<!-- Head -->
+	<!-- Head -->
 	<head>
 		<meta charset="UTF-8">
 		<title>Courtney Dart</title>
 		<link rel="stylesheet" type="text/css" href="./css/Courtney's_portfolio.css">
+		<script src="./js/Courtney's_portfolio.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
 	</head>
 
-<!-- Body -->
-<body class="Background"> 
+	<!-- Body -->
+	<body class="Background"> 
 
-<!-- Navbar -->
+	<!-- Fade in effect -->
+	<script>
+		document.body.className += ' fade-out';
+		$(function() {
+			$('body').removeClass('fade-out');
+			}
+		);
+	</script>
+
+	<!-- Navbar -->
 	<div class="Navbar">
 		<a class="active" href="#Home">Home</a> 
+		<a href="#Slideshow">Slideshow</a>
 		<a href="#About">About</a>
 		<a href="#GitHub">GitHub</a>
-		<a href="#Contact">Contact</a>
+		<!-- This makes it so the openForm function runs when we click Contact on the nav bar -->
+		<a onclick="openForm()">Contact</a> 
 	</div>
 
-<!-- Home -->
-		<br> <!-- Breaks inserted to add space between navbar and first heading -->
-		<br>
+<!-- This allows the form to close when we click outside the nav bar or contact form -->
+<div class="btn cancel" onclick="closeForm()">
 
-<!-- Video -->
-	<div id="Home">
+	<!-- Home -->
+	<div id="home">
+		<!-- Breaks inserted to add space between navbar and first heading -->
+		<br> 
+		<br>
+	</div>
+
+	<!-- Video -->
 		<video autoplay muted loop id="Typing_Video"> <!-- Makes the video play automatically, on a loop and with no sound -->
 			<source src="./vids/video.mp4" type="video/mp4" >
 			Your browser does not support HTML5 video. <!-- Display message if video fails to run -->
 		</video>
-	</div>
+	
 
-<!-- Video text --> 
+	<!-- Video text --> 
 	<div class="Video_Text"> 
 		<h1 style="color:white;">Courtney Dart's Portfolio</h1>
 			<p> 
@@ -49,7 +67,96 @@
 			</p> 
 	</div>
 
-<!-- About section -->
+	<!-- Slideshow section -->
+	<div id="slideshow">
+		<div id="slideshow_background"> 
+		  <div id="slideshow_container">
+			
+			<div class="mySlides fade">
+			  <div class="slide_number">1 / 6</div>
+				<img class="slide_show_images" src="Stylesheet/Images/Picture_of_You.jpg" style="width:100%">
+				  <div class="text">I'm available to assist you on your project!</div>
+			</div>
+			
+			<div class="mySlides fade">
+			  <div class="slide_number">2 / 6</div>
+				<img class="slide_show_images" src="Stylesheet/Images/HTML_CSS_and_JavaScript.jpeg" style="width:100%">
+				  <div class="text">I am a full-stack software developer,<br> trained in:<br>HTML, CSS, JavaScript,</div>
+			</div>
+	
+			<div class="mySlides fade">
+			  <div class="slide_number">3 / 6</div>
+				<img class="slide_show_images" src="Stylesheet/Images/Python.png" style="width:100%">
+				  <div class="text">the popular programming language Python,</div>
+			</div>
+	
+			<div class="mySlides fade">
+			  <div class="slide_number">4 / 6</div>
+				<img class="slide_show_images" src="Stylesheet/Images/C_Sharp_and_Dot_NET.png" style="width:100%">
+				  <div class="text">C#, .NET Framework, ASP.NET, MVC,</div>
+			</div>
+	
+			<div class="mySlides fade">
+			  <div class="slide_number">5 / 6</div>
+				<img class="slide_show_images" src="Stylesheet/Images/SQL_and_Database.jpg" style="width:100%">
+				  <div class="text">back end development, databases and SQL.</div>
+				</div>
+	
+			<div class="mySlides fade">
+			  <div class="slide_number">6 / 6</div>
+				<img class="slide_show_images" src="Stylesheet/Images/Coding_1.jpg" style="width:100%">
+				  <div class="text"> 
+					<a onclick="openForm()" href="#Contact" style="color:white;">Contact me now!</a>
+				  </div>
+			</div>
+		
+			  <a class="Previous" onclick="plusSlides(-1)">&#10094;</a>
+			  <a class="Next" onclick="plusSlides(1)">&#10095;</a>
+			
+		  </div>
+	  <br>
+	
+		  <div style="text-align:center">
+	 
+			<span class="dot" onclick="currentSlide(1)"></span> 
+			<span class="dot" onclick="currentSlide(2)"></span> 
+			<span class="dot" onclick="currentSlide(3)"></span> 
+			<span class="dot" onclick="currentSlide(4)"></span> 
+			<span class="dot" onclick="currentSlide(5)"></span> 
+			<span class="dot" onclick="currentSlide(6)"></span> 
+	
+		  </div>
+		</div>
+	  </div>
+
+	  <!-- We included our JS function within this file to ensure it was given precedence, this function covers the slideshow -->
+	  <script>
+		var slideIndex = 1;
+		  showSlides(slideIndex);
+		function plusSlides(n) {
+		  showSlides(slideIndex += n);
+		}
+		function currentSlide(n) {
+		  showSlides(slideIndex = n);
+		}
+		function showSlides(n) {
+		  var i;
+		  var slides = document.getElementsByClassName("mySlides");
+		  var dots = document.getElementsByClassName("dot");
+			if (n > slides.length) {slideIndex = 1}    
+			if (n < 1) {slideIndex = slides.length}
+			  for (i = 0; i < slides.length; i++) {
+			  slides[i].style.display = "none";  
+			  }
+			  for (i = 0; i < dots.length; i++) {
+				dots[i].className = dots[i].className.replace(" active", "");
+			  }
+		  slides[slideIndex-1].style.display = "block";  
+		  dots[slideIndex-1].className += " active";
+		}
+	  </script>
+
+	<!-- About section -->
 	<div class="Row" id="About"> 
 		<div class="Column_2"> <!-- Left column -->
 			<img src="./img/thumbnail_2.jpg" alt="Woman in Tech">
@@ -63,7 +170,7 @@
 		</div>
 	</div>
 
-<!-- GitHub section -->
+	<!-- GitHub section -->
 	<div class="Row" id="GitHub">
 		<div class="Column_1"> <!-- Left column -->
 			<h1>GitHub</h1>
@@ -75,26 +182,30 @@
 			</a><img src="./img/thumbnail_1.jpg" alt="Think Outside the Box"></a>
 		</div>
 	</div>
+<!-- This div houses everything from the class btn close, closeFrom() function. -->
+</div>
 
-<!-- Contact section -->
-	<div class="Row" id="Contact"> 
-		<div class="Column_3"> <!-- Contact image, left column -->
-			<img src="./img/thumbnail_4.png" alt="Contact Me">
-		</div>
-	
-		<div class="Column_1"> <!-- Contact form, right "column" -->
-			<h1>Contact</h2> 
-				<form action="" method="get"> <!-- This specifies where to send the form data and how; it is left blank -->
-					<label>Name:</label>
-						<input type="text" placeholder="Please enter your name here">
-					<label>Email:</label>
-						<input type="text" id="Email" name="Email" placeholder="Please enter your email here">
-					<label>Message:</label>
-						<input type="text" id="Message" name="Message" placeholder="Please write your message here">
-						<input type="submit" value="Submit">
+	<!-- Contact section -->
+	<div id="Contact"> 
+		<button onclick="openForm()" class="pop_up_button">CONTACT</button>
+			<div class="form-popup" id="myForm">
+				<!-- Here we are using a free online service from https://formspree.io/ to send our contact form to an email address - note: it will not run unless live on the internet, it will have to be pushed to your online website first -->
+				<form action="https://formspree.io/info@learncodinganywhere.com" method="POST" class="form-container">
+					<h1>Contact</h2> 
+						<label for="fname">Name:</label><br>
+							<input type="text" id="Name" class="field" name="name" placeholder="Your name" required><br>
+						<label for="email">Email Address:</label><br>
+							<input type="text" id="Email" class="field" name="email" placeholder="Your email address" required><br>
+						<label for="phone">Phone Number:</label><br>
+							<input type="text" id="Phone" class="field" name="phone" placeholder="Your phone number"><br>
+						<label for="lname">Message:</label><br>
+							<input type="text" id="Message" class="field" name="message" placeholder="Your message"><br>
+						
+					<button type="submit" class="btn">SUBMIT</button>
+					<button type="button" class="btn cancel" onclick="closeForm()">CLOSE</button>
 				</form>
+			</div>	
 		</div>
-	</div>
 	
 <!-- Footer section -->
 	<footer>
