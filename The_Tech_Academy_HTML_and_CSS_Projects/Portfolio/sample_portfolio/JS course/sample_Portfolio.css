@@ -119,7 +119,7 @@ body.fade-out {
 
 /* Slideshow Styling */
 #Slideshow_Background {
-  background:rgba(248, 9, 9, 0.35); /* This creates a slightly transparent white background that's placed over the video */
+  background:rgba(255, 255, 255, 0.35); /* This creates a slightly transparent white background that's placed over the video */
   }
 
 
