@@ -8,8 +8,8 @@
 	<title>Courtney Dart</title>
 	<link rel="stylesheet" type="text/css" href="./css/Courtney's_portfolio.css">
 	<script src="./js/Courtney's_portfolio.js" defer></script>
-	<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script> -->
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+	<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"></script> -->
 </head>
 
 <!-- Body -->
@@ -28,8 +28,8 @@
 
 		<!-- Navbar -->
 		<div class="Navbar">
-			<a class="active" href="#home">Home</a>
-			<a href="#slideshow2">Slideshow</a>
+			<a class="active" href="#Home">Home</a>
+			<a href="#Slideshow">Slideshow</a>
 			<a href="#About">About</a>
 			<a href="#GitHub">GitHub</a>
 			<!-- This makes it so the openForm function runs when we click Contact on the nav bar -->
@@ -40,7 +40,7 @@
 		<div class="btn cancel" onclick="closeForm()">
 
 			<!-- Home -->
-			<div id="home">
+			<div id="Home">
 				<!-- Breaks inserted to add space between navbar and first heading -->
 				<br>
 				<br>
@@ -71,89 +71,101 @@
 			</div>
 
 			<!-- Auto playing slideshow -->
-			<!-- <div id="slideshow_background"> 
-		<div id="slideshow_container">
-			<div id="slideshow">
-				<div class="mySlides">
-					<img class="slide_show_images" src="./img/myHeadshot.jpg" alt="">
-						<div class="text">I'm available to assist you on your project!</div>
-				</div>
-				<div class="mySlides">
-					<img class="slide_show_images" src="./img/HTML_CSS_and_JavaScript.jpeg" alt="">
-						<div class="text">I am a full-stack software developer,<br> trained in:<br>HTML, CSS, JavaScript,</div>
-				</div>
-				<div class="mySlides">
-					<img class="slide_show_images" src="./img/Python.png" alt="">
-						<div class="text">the popular programming language Python,</div>
-				</div>
-				<div class="mySlides">
-					<img class="slide_show_images" src="./img/C_Sharp_and_Dot_NET.png" alt="">
-						<div class="text">C#, .NET Framework, ASP.NET, MVC,</div>
-				</div>
-				<div class="mySlides">
-					<img class="slide_show_images" src="./img/SQL_and_Database.jpg" alt="">
-						<div class="text">back end development, databases and SQL.</div>
-				</div>
-				<div class="mySlides">
-					<img class="slide_show_images" src="./img/Coding_1.jpg" alt="">
-						<div class="text">
-							<a onclick="openForm()" href="#Contact" style="color:white;">Contact me now!</a>
-						</div>
-				</div>
-			</div>
-		</div>
-	</div> -->
+			<div id="Slideshow">
+				<div id="Slideshow_Background">
+					<div id="Slideshow_Container">
 
-			<div class="slideshow_container">
-				<div id="slideshow2">
-					<div>
-						<img src="./img/myHeadshot.jpg" alt="">
+						<div class="mySlides fade">
+							<div class="Slide_Number">1 / 6</div>
+								<img class="Slide_Show_Images" src="./img/myHeadshot.jpg" style="width:100%">
+									<div class="text">I'm available to assist you on your project!</div>
+						</div>
+
+						<div class="mySlides fade">
+							<div class="Slide_Number">2 / 6</div>
+								<img class="Slide_Show_Images" src="./img/HTML_CSS_and_JavaScript.jpeg" style="width:100%">
+									<div class="text">I am a full-stack software developer,<br> trained in:<br>HTML, CSS,
+									JavaScript,</div>
+						</div>
+
+						<div class="mySlides fade">
+							<div class="Slide_Number">3 / 6</div>
+								<img class="Slide_Show_Images" src="./img/Python.png" style="width:100%">
+									<div class="text">the popular programming language Python,</div>
+						</div>
+
+						<div class="mySlides fade">
+							<div class="Slide_Number">4 / 6</div>
+								<img class="Slide_Show_Images" src="./img/C_Sharp_and_Dot_NET.png" style="width:100%">
+									<div class="text">C#, .NET Framework, ASP.NET, MVC,</div>
+						</div>
+
+						<div class="mySlides fade">
+							<div class="Slide_Number">5 / 6</div>
+								<img class="Slide_Show_Images" src="./img/SQL_and_Database.jpg" style="width:100%">
+									<div class="text">back end development, databases and SQL.</div>
+						</div>
+
+						<div class="mySlides fade">
+							<div class="Slide_Number">6 / 6</div>
+								<img class="Slide_Show_Images" src="./img/Coding_1.jpg" style="width:100%">
+									<div class="text">
+										<a onclick="openForm()" href="#Contact" style="color:white;">Contact me now!</a>
+									</div>
+						</div>
+
+						<a class="Previous" onclick="plusSlides(-1)">&#10094;</a>
+						<a class="Next" onclick="plusSlides(1)">&#10095;</a>
+
 					</div>
-					<div>
-						<img src="./img/HTML_CSS_and_JavaScript.jpeg" alt="">
-					</div>
-					<div>
-						<img src="./img/Python.png" alt="">
-					</div>
-					<div>
-						<img src="./img/C_Sharp_and_Dot_NET.png" alt="">
-					</div>
-					<div>
-						<img src="./img/SQL_and_Database.jpg" alt="">
-					</div>
-					<div>
-						<img src="./img/Coding_1.jpg" alt="">
+				<br>
+
+					<div style="text-align:center">
+			   
+					  <span class="dot" onclick="currentSlide(1)"></span> 
+					  <span class="dot" onclick="currentSlide(2)"></span> 
+					  <span class="dot" onclick="currentSlide(3)"></span> 
+					  <span class="dot" onclick="currentSlide(4)"></span> 
+					  <span class="dot" onclick="currentSlide(5)"></span> 
+					  <span class="dot" onclick="currentSlide(6)"></span> 
+			  
 					</div>
 				</div>
-				
 			</div>
 
 			<!-- We included our JS function within this file to ensure it was given precedence, this function covers the slideshow -->
-			<!-- <script>
-		var slideIndex = 1;
-		  showSlides(slideIndex);
-		function plusSlides(n) {
-		  showSlides(slideIndex += n);
-		}
-		function currentSlide(n) {
-		  showSlides(slideIndex = n);
-		}
-		function showSlides(n) {
-		  var i;
-		  var slides = document.getElementsByClassName("mySlides");
-		  var dots = document.getElementsByClassName("dot");
-			if (n > slides.length) {slideIndex = 1}    
-			if (n < 1) {slideIndex = slides.length}
-			  for (i = 0; i < slides.length; i++) {
-			  slides[i].style.display = "none";  
-			  }
-			  for (i = 0; i < dots.length; i++) {
-				dots[i].className = dots[i].className.replace(" active", "");
-			  }
-		  slides[slideIndex-1].style.display = "block";  
-		  dots[slideIndex-1].className += " active";
-		}
-	  </script> -->
+			<script>
+				var slideIndex = 1;
+				showSlides(slideIndex);
+
+				function plusSlides(n) {
+					showSlides(slideIndex += n);
+				}
+
+				function currentSlide(n) {
+					showSlides(slideIndex = n);
+				}
+
+				function showSlides(n) {
+					var i;
+					var slides = document.getElementsByClassName("mySlides");
+					var dots = document.getElementsByClassName("dot");
+					if (n > slides.length) {
+						slideIndex = 1
+					}
+					if (n < 1) {
+						slideIndex = slides.length
+					}
+					for (i = 0; i < slides.length; i++) {
+						slides[i].style.display = "none";
+					}
+					for (i = 0; i < dots.length; i++) {
+						dots[i].className = dots[i].className.replace(" active", "");
+					}
+					slides[slideIndex - 1].style.display = "block";
+					dots[slideIndex - 1].className += " active";
+				}
+			</script>
 
 			<!-- About section -->
 			<div class="Row" id="About">
