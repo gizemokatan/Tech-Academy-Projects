@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<!-- saved from url=(0157)file:///C:/Users/marti/Documents/GitHub/Tech-Academy-Projects/The_Tech_Academy_HTML_and_CSS_Projects/Portfolio/Courtney's_Portfolio/Courtney's_portfolio.html -->
+<html><!-- Head --><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	
+	<title>Courtney Dart</title>
+	<link rel="stylesheet" type="text/css" href="./Courtney Dart_files/Courtney&#39;s_portfolio.css">
+</head>
+
+<!-- Body -->
+
+<body>
+	<div class="body2">
+
+		<!-- Fade in effect -->
+		<script>
+			var body2 = document.getElementsByClassName("body2");
+			document.body2.className += ' fade-out';
+			$(function () {
+				$('body2').removeClass('fade-out');
+			});
+		</script>
+
+		<!-- Navbar -->
+		<div class="Navbar">
+			<a class="active" href="file:///C:/Users/marti/Documents/GitHub/Tech-Academy-Projects/The_Tech_Academy_HTML_and_CSS_Projects/Portfolio/Courtney&#39;s_Portfolio/Courtney&#39;s_portfolio.html#home">Home</a>
+			<a href="file:///C:/Users/marti/Documents/GitHub/Tech-Academy-Projects/The_Tech_Academy_HTML_and_CSS_Projects/Portfolio/Courtney&#39;s_Portfolio/Courtney&#39;s_portfolio.html#slideshow2">Slideshow</a>
+			<a href="file:///C:/Users/marti/Documents/GitHub/Tech-Academy-Projects/The_Tech_Academy_HTML_and_CSS_Projects/Portfolio/Courtney&#39;s_Portfolio/Courtney&#39;s_portfolio.html#About">About</a>
+			<a href="file:///C:/Users/marti/Documents/GitHub/Tech-Academy-Projects/The_Tech_Academy_HTML_and_CSS_Projects/Portfolio/Courtney&#39;s_Portfolio/Courtney&#39;s_portfolio.html#GitHub">GitHub</a>
+			<!-- This makes it so the openForm function runs when we click Contact on the nav bar -->
+			<a onclick="openForm()">Contact</a>
+		</div>
+
+		<!-- This allows the form to close when we click outside the nav bar or contact form -->
+		<div class="btn cancel" onclick="closeForm()">
+
+			<!-- Home -->
+			<div id="home">
+				<!-- Breaks inserted to add space between navbar and first heading -->
+				<br>
+				<br>
+			</div>
+
+			<!-- Background Image -->
+			<div>
+				<img id="background_image" src="./Courtney Dart_files/thumbnail_3.jpg">
+			</div>
+
+			<!-- Background Image text -->
+			<div class="background_image_text">
+				<h1 style="color:white;">Courtney Dart's Portfolio</h1>
+				<p>
+					<strong>
+						</strong></p><center><strong>
+							<q>I would like to be remembered as someone who was not afraid to do what she wanted to do,
+								<br>and as someone who took risks along the way in order to achieve her goals.
+							</q>
+							<br>-Sally Ride<br>
+							<br>
+							My name is Courtney Dart. Welcome to my portfolio website. On it, I will tell you about my
+							background and experience.<br>
+							<br>Thank you for stopping by and enjoy!
+						</strong></center><strong>
+					</strong>
+				<p></p>
+			</div>
+
+			<!-- Auto playing slideshow -->
+			<div id="Slideshow">
+				<div id="Slideshow_Background">
+					<div id="Slideshow_Container">
+
+						
+
+						
+
+						
+
+						
+
+						
+
+						
+					<div class="mySlides fade" style="display: block;">
+							<img class="Slide_Show_Images" src="./Courtney Dart_files/Python.png">
+							<div class="text">the popular programming language Python,</div>
+						</div><div class="mySlides fade" style="display: none;">
+							<img class="Slide_Show_Images" src="./Courtney Dart_files/C_Sharp_and_Dot_NET.png">
+							<div class="text">C#, .NET Framework, ASP.NET, MVC,</div>
+						</div><div class="mySlides fade" style="display: none;">
+							<img class="Slide_Show_Images" src="./Courtney Dart_files/SQL_and_Database.jpg">
+							<div class="text">back end development, databases and SQL.</div>
+						</div><div class="mySlides fade" style="display: none;">
+							<img class="Slide_Show_Images" src="./Courtney Dart_files/Coding_1.jpg">
+							<div class="text">
+								<a onclick="openForm()" href="file:///C:/Users/marti/Documents/GitHub/Tech-Academy-Projects/The_Tech_Academy_HTML_and_CSS_Projects/Portfolio/Courtney&#39;s_Portfolio/Courtney&#39;s_portfolio.html#Contact" style="color:white;">Contact me now!</a>
+							</div>
+						</div><div class="mySlides fade" style="display: none;">
+							<img class="Slide_Show_Images" src="./Courtney Dart_files/myHeadshot.jpg">
+							<div class="text">I'm available to assist you on your project!</div>
+						</div><div class="mySlides fade" style="display: none;">
+							<img class="Slide_Show_Images" src="./Courtney Dart_files/HTML_CSS_and_JavaScript.jpeg">
+							<div class="text">I am a full-stack software developer,<br> trained in:<br>HTML, CSS,
+								JavaScript,</div>
+						</div></div>
+
+					<!-- <div class="slideshow_container">
+				<div id="slideshow2">
+					<div>
+						<img src="./img/myHeadshot.jpg" alt="">
+					</div>
+					<div>
+						<img src="./img/HTML_CSS_and_JavaScript.jpeg" alt="">
+					</div>
+					<div>
+						<img src="./img/Python.png" alt="">
+					</div>
+					<div>
+						<img src="./img/C_Sharp_and_Dot_NET.png" alt="">
+					</div>
+					<div>
+						<img src="./img/SQL_and_Database.jpg" alt="">
+					</div>
+					<div>
+						<img src="./img/Coding_1.jpg" alt="">
+					</div>
+				</div>
+				
+			</div> -->
+
+					<!-- We included our JS function within this file to ensure it was given precedence, this function covers the slideshow -->
+					<!-- <script>
+						var slideIndex = 1;
+						showSlides(slideIndex);
+
+						function plusSlides(n) {
+							showSlides(slideIndex += n);
+						}
+
+						function currentSlide(n) {
+							showSlides(slideIndex = n);
+						}
+
+						function showSlides(n) {
+							var i;
+							var slides = document.getElementsByClassName("mySlides");
+							var dots = document.getElementsByClassName("dot");
+							if (n > slides.length) {
+								slideIndex = 1
+							}
+							if (n < 1) {
+								slideIndex = slides.length
+							}
+							for (i = 0; i < slides.length; i++) {
+								slides[i].style.display = "none";
+							}
+							for (i = 0; i < dots.length; i++) {
+								dots[i].className = dots[i].className.replace(" active", "");
+							}
+							slides[slideIndex - 1].style.display = "block";
+							dots[slideIndex - 1].className += " active";
+						}
+					</script> -->
+
+					<!-- About section -->
+					<div class="Row" id="About">
+						<div class="Column_2">
+							<!-- Left column -->
+							<img class="image_effects" src="./Courtney Dart_files/thumbnail_2.jpg" alt="Woman in Tech">
+						</div>
+
+						<div class="Column_1">
+							<!-- Right column -->
+							<h1>About</h1>
+								<p>I am a software developer who is willing to take the current technologies to the next
+									level
+									in order to tackle the world's most pressing issues; educational, environmental, and
+									agricultural concerns.
+									<br><br>I am a graduate of <a href="https://www.learncodinganywhere.com/" target="_blank">The
+										Tech Academy</a>’s Software Developer Boot Camp, and trained and experienced in
+									the
+									following web and programming languages: HTML, CSS, JavaScript, SQL, C# and more.
+									<br><br>I am a full-stack developer and would love to work with you on your project.
+									<a href="file:///C:/Users/marti/Documents/GitHub/Tech-Academy-Projects/The_Tech_Academy_HTML_and_CSS_Projects/Portfolio/Courtney&#39;s_Portfolio/Courtney&#39;s_portfolio.html#Contact">Contact</a> me below!</p>
+						</div>
+					</div>
+
+					<!-- GitHub section -->
+					<div class="Row" id="GitHub">
+						<div class="Column_1">
+							<!-- Left column -->
+							<h1>GitHub</h1>
+							<p>You can view my coding projects on my GitHub profile here:<br>
+								</p><center><a href="https://github.com/cdart1" target="_blank">Courtney's GitHub</a>
+								</center>
+							<p></p>
+						</div>
+
+						<div class="Column_2">
+							<!-- Right column -->
+							<img class="image_effects" src="./Courtney Dart_files/thumbnail_1.jpg" alt="Think Outside the Box">
+						</div>
+					</div>
+					<!-- This div houses everything from the class btn close, closeFrom() function. -->
+				</div>
+
+				<!-- Contact section -->
+				<div id="Contact">
+					<button onclick="openForm()" class="pop_up_button">CONTACT</button>
+					<div class="form-popup" id="myForm">
+						<!-- Here we are using a free online service from https://formspree.io/ to send our contact form to an email address - note: it will not run unless live on the internet, it will have to be pushed to your online website first -->
+						<form action="https://formspree.io/info@learncodinganywhere.com" method="POST" class="form-container">
+							<h1>Contact</h1>
+								<label for="fname">Name:</label><br>
+								<input type="text" id="Name" class="field" name="name" placeholder="Your name" required=""><br>
+								<label for="email">Email Address:</label><br>
+								<input type="text" id="Email" class="field" name="email" placeholder="Your email address" required=""><br>
+								<label for="phone">Phone Number:</label><br>
+								<input type="text" id="Phone" class="field" name="phone" placeholder="Your phone number"><br>
+								<label for="lname">Message:</label><br>
+								<input type="text" id="Message" class="field" name="message" placeholder="Your message"><br>
+
+								<button type="submit" class="btn">SUBMIT</button>
+								<button type="button" class="btn cancel" onclick="closeForm()">CLOSE</button>
+						</form>
+					</div>
+				</div>
+
+				<!-- Footer section -->
+				<footer>
+					<p>
+						</p><center>© Created by Courtney | 2020</center><br>
+					<p></p>
+				</footer>
+
+			</div>
+			<script src="./Courtney Dart_files/Courtney&#39;s_portfolio.js.download" defer=""></script>
+			<script src="./Courtney Dart_files/jquery.min.js.download"></script>
+			<script src="./Courtney Dart_files/jquery.min.js(1).download"></script>
+
+
+</div></div></body></html>

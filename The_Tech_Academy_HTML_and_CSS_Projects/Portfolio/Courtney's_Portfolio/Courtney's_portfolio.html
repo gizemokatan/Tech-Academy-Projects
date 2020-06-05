@@ -7,9 +7,6 @@
 	<meta charset="UTF-8">
 	<title>Courtney Dart</title>
 	<link rel="stylesheet" type="text/css" href="./css/Courtney's_portfolio.css">
-	<script src="./js/Courtney's_portfolio.js" defer></script>
-	<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script> -->
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"></script>
 </head>
 
 <!-- Body -->
@@ -71,40 +68,45 @@
 			</div>
 
 			<!-- Auto playing slideshow -->
-			<!-- <div id="slideshow_background"> 
-		<div id="slideshow_container">
-			<div id="slideshow">
-				<div class="mySlides">
-					<img class="slide_show_images" src="./img/myHeadshot.jpg" alt="">
-						<div class="text">I'm available to assist you on your project!</div>
-				</div>
-				<div class="mySlides">
-					<img class="slide_show_images" src="./img/HTML_CSS_and_JavaScript.jpeg" alt="">
-						<div class="text">I am a full-stack software developer,<br> trained in:<br>HTML, CSS, JavaScript,</div>
-				</div>
-				<div class="mySlides">
-					<img class="slide_show_images" src="./img/Python.png" alt="">
-						<div class="text">the popular programming language Python,</div>
-				</div>
-				<div class="mySlides">
-					<img class="slide_show_images" src="./img/C_Sharp_and_Dot_NET.png" alt="">
-						<div class="text">C#, .NET Framework, ASP.NET, MVC,</div>
-				</div>
-				<div class="mySlides">
-					<img class="slide_show_images" src="./img/SQL_and_Database.jpg" alt="">
-						<div class="text">back end development, databases and SQL.</div>
-				</div>
-				<div class="mySlides">
-					<img class="slide_show_images" src="./img/Coding_1.jpg" alt="">
-						<div class="text">
-							<a onclick="openForm()" href="#Contact" style="color:white;">Contact me now!</a>
-						</div>
-				</div>
-			</div>
-		</div>
-	</div> -->
+			<div id="Slideshow">
+				<div id="Slideshow_Background">
+					<div id="Slideshow_Container">
 
-			<div class="slideshow_container">
+						<div class="mySlides fade">
+							<img class="Slide_Show_Images" src="./img/myHeadshot.jpg">
+							<div class="text">I'm available to assist you on your project!</div>
+						</div>
+
+						<div class="mySlides fade">
+							<img class="Slide_Show_Images" src="./img/HTML_CSS_and_JavaScript.jpeg">
+							<div class="text">I am a full-stack software developer,<br> trained in:<br>HTML, CSS,
+								JavaScript,</div>
+						</div>
+
+						<div class="mySlides fade">
+							<img class="Slide_Show_Images" src="./img/Python.png">
+							<div class="text">the popular programming language Python,</div>
+						</div>
+
+						<div class="mySlides fade">
+							<img class="Slide_Show_Images" src="./img/C_Sharp_and_Dot_NET.png">
+							<div class="text">C#, .NET Framework, ASP.NET, MVC,</div>
+						</div>
+
+						<div class="mySlides fade">
+							<img class="Slide_Show_Images" src="./img/SQL_and_Database.jpg">
+							<div class="text">back end development, databases and SQL.</div>
+						</div>
+
+						<div class="mySlides fade">
+							<img class="Slide_Show_Images" src="./img/Coding_1.jpg">
+							<div class="text">
+								<a onclick="openForm()" href="#Contact" style="color:white;">Contact me now!</a>
+							</div>
+						</div>
+					</div>
+
+					<!-- <div class="slideshow_container">
 				<div id="slideshow2">
 					<div>
 						<img src="./img/myHeadshot.jpg" alt="">
@@ -126,105 +128,123 @@
 					</div>
 				</div>
 				
-			</div>
+			</div> -->
 
-			<!-- We included our JS function within this file to ensure it was given precedence, this function covers the slideshow -->
-			<!-- <script>
-		var slideIndex = 1;
-		  showSlides(slideIndex);
-		function plusSlides(n) {
-		  showSlides(slideIndex += n);
-		}
-		function currentSlide(n) {
-		  showSlides(slideIndex = n);
-		}
-		function showSlides(n) {
-		  var i;
-		  var slides = document.getElementsByClassName("mySlides");
-		  var dots = document.getElementsByClassName("dot");
-			if (n > slides.length) {slideIndex = 1}    
-			if (n < 1) {slideIndex = slides.length}
-			  for (i = 0; i < slides.length; i++) {
-			  slides[i].style.display = "none";  
-			  }
-			  for (i = 0; i < dots.length; i++) {
-				dots[i].className = dots[i].className.replace(" active", "");
-			  }
-		  slides[slideIndex-1].style.display = "block";  
-		  dots[slideIndex-1].className += " active";
-		}
-	  </script> -->
+					<!-- We included our JS function within this file to ensure it was given precedence, this function covers the slideshow -->
+					<!-- <script>
+						var slideIndex = 1;
+						showSlides(slideIndex);
 
-			<!-- About section -->
-			<div class="Row" id="About">
-				<div class="Column_2">
-					<!-- Left column -->
-					<img class="image_effects" src="./img/thumbnail_2.jpg" alt="Woman in Tech">
+						function plusSlides(n) {
+							showSlides(slideIndex += n);
+						}
+
+						function currentSlide(n) {
+							showSlides(slideIndex = n);
+						}
+
+						function showSlides(n) {
+							var i;
+							var slides = document.getElementsByClassName("mySlides");
+							var dots = document.getElementsByClassName("dot");
+							if (n > slides.length) {
+								slideIndex = 1
+							}
+							if (n < 1) {
+								slideIndex = slides.length
+							}
+							for (i = 0; i < slides.length; i++) {
+								slides[i].style.display = "none";
+							}
+							for (i = 0; i < dots.length; i++) {
+								dots[i].className = dots[i].className.replace(" active", "");
+							}
+							slides[slideIndex - 1].style.display = "block";
+							dots[slideIndex - 1].className += " active";
+						}
+					</script> -->
+
+					<!-- About section -->
+					<div class="Row" id="About">
+						<div class="Column_2">
+							<!-- Left column -->
+							<img class="image_effects" src="./img/thumbnail_2.jpg" alt="Woman in Tech">
+						</div>
+
+						<div class="Column_1">
+							<!-- Right column -->
+							<h1>About</h2>
+								<p>I am a software developer who is willing to take the current technologies to the next
+									level
+									in order to tackle the world's most pressing issues; educational, environmental, and
+									agricultural concerns.
+									<br><br>I am a graduate of <a href="https://www.learncodinganywhere.com"
+										target="_blank">The
+										Tech Academy</a>’s Software Developer Boot Camp, and trained and experienced in
+									the
+									following web and programming languages: HTML, CSS, JavaScript, SQL, C# and more.
+									<br><br>I am a full-stack developer and would love to work with you on your project.
+									<a href="#Contact">Contact</a> me below!</p>
+						</div>
+					</div>
+
+					<!-- GitHub section -->
+					<div class="Row" id="GitHub">
+						<div class="Column_1">
+							<!-- Left column -->
+							<h1>GitHub</h1>
+							<p>You can view my coding projects on my GitHub profile here:<br>
+								<center><a href="https://github.com/cdart1" target="_blank">Courtney's GitHub</a>
+								</center>
+							</p>
+						</div>
+
+						<div class="Column_2">
+							<!-- Right column -->
+							</a><img class="image_effects" src="./img/thumbnail_1.jpg" alt="Think Outside the Box"></a>
+						</div>
+					</div>
+					<!-- This div houses everything from the class btn close, closeFrom() function. -->
 				</div>
 
-				<div class="Column_1">
-					<!-- Right column -->
-					<h1>About</h2>
-						<p>I am a software developer who is willing to take the current technologies to the next level
-							in order to tackle the world's most pressing issues; educational, environmental, and
-							agricultural concerns.
-							<br><br>I am a graduate of <a href="https://www.learncodinganywhere.com" target="_blank">The
-								Tech Academy</a>’s Software Developer Boot Camp, and trained and experienced in the
-							following web and programming languages: HTML, CSS, JavaScript, SQL, C# and more.
-							<br><br>I am a full-stack developer and would love to work with you on your project. <a
-								href="#Contact">Contact</a> me below!</p>
-				</div>
-			</div>
+				<!-- Contact section -->
+				<div id="Contact">
+					<button onclick="openForm()" class="pop_up_button">CONTACT</button>
+					<div class="form-popup" id="myForm">
+						<!-- Here we are using a free online service from https://formspree.io/ to send our contact form to an email address - note: it will not run unless live on the internet, it will have to be pushed to your online website first -->
+						<form action="https://formspree.io/info@learncodinganywhere.com" method="POST"
+							class="form-container">
+							<h1>Contact</h2>
+								<label for="fname">Name:</label><br>
+								<input type="text" id="Name" class="field" name="name" placeholder="Your name"
+									required><br>
+								<label for="email">Email Address:</label><br>
+								<input type="text" id="Email" class="field" name="email"
+									placeholder="Your email address" required><br>
+								<label for="phone">Phone Number:</label><br>
+								<input type="text" id="Phone" class="field" name="phone"
+									placeholder="Your phone number"><br>
+								<label for="lname">Message:</label><br>
+								<input type="text" id="Message" class="field" name="message"
+									placeholder="Your message"><br>
 
-			<!-- GitHub section -->
-			<div class="Row" id="GitHub">
-				<div class="Column_1">
-					<!-- Left column -->
-					<h1>GitHub</h1>
-					<p>You can view my coding projects on my GitHub profile here:<br>
-						<center><a href="https://github.com/cdart1" target="_blank">Courtney's GitHub</a></center>
+								<button type="submit" class="btn">SUBMIT</button>
+								<button type="button" class="btn cancel" onclick="closeForm()">CLOSE</button>
+						</form>
+					</div>
+				</div>
+
+				<!-- Footer section -->
+				<footer>
+					<p>
+						<center>&copy Created by Courtney | 2020</center><br>
 					</p>
-				</div>
+				</footer>
 
-				<div class="Column_2">
-					<!-- Right column -->
-					</a><img class="image_effects" src="./img/thumbnail_1.jpg" alt="Think Outside the Box"></a>
-				</div>
 			</div>
-			<!-- This div houses everything from the class btn close, closeFrom() function. -->
-		</div>
-
-		<!-- Contact section -->
-		<div id="Contact">
-			<button onclick="openForm()" class="pop_up_button">CONTACT</button>
-			<div class="form-popup" id="myForm">
-				<!-- Here we are using a free online service from https://formspree.io/ to send our contact form to an email address - note: it will not run unless live on the internet, it will have to be pushed to your online website first -->
-				<form action="https://formspree.io/info@learncodinganywhere.com" method="POST" class="form-container">
-					<h1>Contact</h2>
-						<label for="fname">Name:</label><br>
-						<input type="text" id="Name" class="field" name="name" placeholder="Your name" required><br>
-						<label for="email">Email Address:</label><br>
-						<input type="text" id="Email" class="field" name="email" placeholder="Your email address"
-							required><br>
-						<label for="phone">Phone Number:</label><br>
-						<input type="text" id="Phone" class="field" name="phone" placeholder="Your phone number"><br>
-						<label for="lname">Message:</label><br>
-						<input type="text" id="Message" class="field" name="message" placeholder="Your message"><br>
-
-						<button type="submit" class="btn">SUBMIT</button>
-						<button type="button" class="btn cancel" onclick="closeForm()">CLOSE</button>
-				</form>
-			</div>
-		</div>
-
-		<!-- Footer section -->
-		<footer>
-			<p>
-				<center>&copy Created by Courtney | 2020</center><br>
-			</p>
-		</footer>
-
-	</div>
+			<script src="./js/Courtney's_portfolio.js" defer></script>
+			<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+			<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"></script>
 </body>
 
 </html>
