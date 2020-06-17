@@ -1,0 +1,7 @@
+C:\Users\marti\Desktop\C-Sharp Projects\StudentDailyReportAssignment\StudentDailyReportAssignment\bin\Debug\StudentDailyReportAssignment.exe.config
+C:\Users\marti\Desktop\C-Sharp Projects\StudentDailyReportAssignment\StudentDailyReportAssignment\bin\Debug\StudentDailyReportAssignment.exe
+C:\Users\marti\Desktop\C-Sharp Projects\StudentDailyReportAssignment\StudentDailyReportAssignment\bin\Debug\StudentDailyReportAssignment.pdb
+C:\Users\marti\Desktop\C-Sharp Projects\StudentDailyReportAssignment\StudentDailyReportAssignment\obj\Debug\StudentDailyReportAssignment.csproj.CoreCompileInputs.cache
+C:\Users\marti\Desktop\C-Sharp Projects\StudentDailyReportAssignment\StudentDailyReportAssignment\obj\Debug\StudentDailyReportAssignment.exe
+C:\Users\marti\Desktop\C-Sharp Projects\StudentDailyReportAssignment\StudentDailyReportAssignment\obj\Debug\StudentDailyReportAssignment.pdb
+C:\Users\marti\Desktop\C-Sharp Projects\StudentDailyReportAssignment\StudentDailyReportAssignment\obj\Debug\StudentDailyReportAssignment.csprojAssemblyReference.cache
