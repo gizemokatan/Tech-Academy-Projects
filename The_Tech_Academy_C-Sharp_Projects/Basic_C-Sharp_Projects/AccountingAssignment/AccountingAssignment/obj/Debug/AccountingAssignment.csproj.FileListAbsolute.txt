@@ -1,0 +1,6 @@
+C:\Users\marti\Desktop\C-Sharp Projects\AccountingAssignment\AccountingAssignment\bin\Debug\AccountingAssignment.exe.config
+C:\Users\marti\Desktop\C-Sharp Projects\AccountingAssignment\AccountingAssignment\bin\Debug\AccountingAssignment.exe
+C:\Users\marti\Desktop\C-Sharp Projects\AccountingAssignment\AccountingAssignment\bin\Debug\AccountingAssignment.pdb
+C:\Users\marti\Desktop\C-Sharp Projects\AccountingAssignment\AccountingAssignment\obj\Debug\AccountingAssignment.csproj.CoreCompileInputs.cache
+C:\Users\marti\Desktop\C-Sharp Projects\AccountingAssignment\AccountingAssignment\obj\Debug\AccountingAssignment.exe
+C:\Users\marti\Desktop\C-Sharp Projects\AccountingAssignment\AccountingAssignment\obj\Debug\AccountingAssignment.pdb
