@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\marti\\source\\repos\\BasicHTMLVideoWebPage\\BasicHTMLVideoWebPage\\BasicHTMLVideoWebPage.csproj",
+      "projectUniqueName": "C:\\Users\\marti\\Documents\\GitHub\\Tech-Academy-Projects\\The_Tech_Academy_Visual_Studio_Projects\\BasicHTMLVideoWebPage\\BasicHTMLVideoWebPage\\BasicHTMLVideoWebPage.csproj",
       "projectName": "BasicHTMLVideoWebPage",
-      "projectPath": "C:\\Users\\marti\\source\\repos\\BasicHTMLVideoWebPage\\BasicHTMLVideoWebPage\\BasicHTMLVideoWebPage.csproj",
+      "projectPath": "C:\\Users\\marti\\Documents\\GitHub\\Tech-Academy-Projects\\The_Tech_Academy_Visual_Studio_Projects\\BasicHTMLVideoWebPage\\BasicHTMLVideoWebPage\\BasicHTMLVideoWebPage.csproj",
       "packagesPath": "C:\\Users\\marti\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\marti\\source\\repos\\BasicHTMLVideoWebPage\\BasicHTMLVideoWebPage\\obj\\",
+      "outputPath": "C:\\Users\\marti\\Documents\\GitHub\\Tech-Academy-Projects\\The_Tech_Academy_Visual_Studio_Projects\\BasicHTMLVideoWebPage\\BasicHTMLVideoWebPage\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Microsoft\\Xamarin\\NuGet\\"
