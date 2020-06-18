@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ShippingQuote
 {
@@ -46,21 +42,6 @@ namespace ShippingQuote
                 Console.WriteLine("Package too heavy to be shipped via Package Express. Have a good day.");
                 Console.ReadLine();
             }
-
-            //string packageWeight1 = packageWeight > 50 ? "Package too heavy to be shipped via Package Express. Have a good day." : "Okay. Thank you.";
-            //Console.WriteLine(packageWeight1);
-
-        
-
-            //string DimensionsTotal = packageWidth > 50 && packageHeight > 50 && packageLength > 50 ? "Package too big to be shipped via Package Express." : "Okay. Thank you.";
-            //double Dimensions = (packageWidth * packageHeight * packageLength * packageWeight) / 100;
-         
-            //decimal Quote = Convert.ToDecimal(Dimensions); 
-            //Console.WriteLine("Your estimated total for shipping this package is: $" + Quote);
-            
-            //Console.WriteLine("Thank you.");
-            //Console.ReadLine();
-
         }
     }
 }
