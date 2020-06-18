@@ -53,8 +53,6 @@ namespace MathConsoleApp
             Console.WriteLine(userNumNew4 + " divided by 7, gives a remainder of " + remainder);
             Console.ReadLine();
 
-            //Anything a user types it always comes back as a string.
-            //Readline always reads as a string.
         }
     }
 }
