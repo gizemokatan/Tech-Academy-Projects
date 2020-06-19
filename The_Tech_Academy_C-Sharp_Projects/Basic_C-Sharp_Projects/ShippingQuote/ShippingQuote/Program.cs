@@ -23,7 +23,7 @@ namespace ShippingQuote
 
                 double Dimensions = packageWidth + packageHeight + packageLength;
 
-                if (Dimensions < 50)
+                if (Dimensions <= 50)
                 {
                     double DimnesionsTotal = (Dimensions * packageWeight) / 100; 
                     decimal Quote = Convert.ToDecimal(DimnesionsTotal);
