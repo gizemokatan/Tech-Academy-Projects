@@ -260,26 +260,5 @@ class Program
         Console.ReadLine();
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     }
 }
