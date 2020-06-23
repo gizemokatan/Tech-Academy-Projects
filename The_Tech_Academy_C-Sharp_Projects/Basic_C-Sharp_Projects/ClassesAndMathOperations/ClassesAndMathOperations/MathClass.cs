@@ -9,7 +9,7 @@ namespace ClassesAndMathOperations
     public class MathClass
     {
         // These are methods of the class, and the class is a model to look at. This doesn't create any objects.
-        // These are for when I create an object, to know what it will have.
+        // These are for when we create an object, to know what it will have.
         public static int addNumbers(int num)
         {
             num = num + 10;
