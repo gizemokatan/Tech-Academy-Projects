@@ -23,7 +23,7 @@ namespace ClassesAndMathOperations
 
             int addNumbersResult = MathClass.addNumbers(userNumber);
             int subtractNumbersResult = math101.subtractNumbers(userNumber);
-            int multiplyNumbersResult = math101.subtractNumbers(userNumber);
+            int multiplyNumbersResult = math101.multiplyNumbers(userNumber);
 
             Console.WriteLine(userNumber + " + 10 = " + addNumbersResult);
             Console.WriteLine(userNumber + " - 10 = " + subtractNumbersResult);
