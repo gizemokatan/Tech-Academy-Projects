@@ -8,10 +8,13 @@ namespace ClassesAndMathOps3
 {
     class MathClass3
     {
-        public void divideNumbers(int num, int num1)
+        // Create a class and create a void method that takes two integers as parameters
+        public void divideNumbers(int num, out int numResult)
         {
-            int numsResult = num / 2;
-            Console.WriteLine("This is your second number: {0} ", num1);
+            // Have the method do a math operation on the first integer and display the second integer to the screen
+            num /= 2;
+            numResult = 6;
+            Console.WriteLine("The second value is: {0} ", numResult);
         }
     }
 }

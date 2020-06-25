@@ -19,6 +19,7 @@ namespace ClassInheritance2
             Console.WriteLine("This is an example of a virtual method being called...");
             // Call the SayName() method on the Employee object
             employee.SayName();
+
         }
     }
 }
