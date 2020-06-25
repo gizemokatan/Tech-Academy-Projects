@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ClassInheritance2
+namespace Interfaces1
 {
     // Create an abstract class called Person with two properties
     public abstract class Person
@@ -12,7 +12,7 @@ namespace ClassInheritance2
         public string FirstName { get; set; }
         public string LastName { get; set; }
 
-        // Declare the SayName() method
+        // Create a method to be implemented in Employee Class
         public virtual void SayName()
         {
             string fullname = FirstName + LastName;

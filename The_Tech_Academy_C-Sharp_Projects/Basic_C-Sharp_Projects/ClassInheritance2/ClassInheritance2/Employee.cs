@@ -9,10 +9,11 @@ namespace ClassInheritance2
     // Create a class called Employee and have it inherit from the Person class
     public class Employee : Person
     {
-        // Implement the SayName() method
+        // Implement SayName method
         public override void SayName()
         {
             base.SayName();
         }
+
     }
 }
