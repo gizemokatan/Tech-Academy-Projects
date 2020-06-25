@@ -6,15 +6,13 @@ using System.Threading.Tasks;
 
 namespace Interfaces1
 {
-    // Create a class called Employee and have it inherit from the Person class
-    public class Employee : Person, IQuittable
+    // Create a class called Employee and have it inherit from the Interface
+    public class Employee : IQuittable
     {
-        // Implement the SayName() method
-        public override void SayName()
-        {
-            base.SayName();
-        }
-        // The Employee class will inherit the interface and implement the Quit() method
+        public string FirstName { get; set; }
+        public string LastName { get; set; }
+
+        // Implement the Quit() method
         public void Quit()
         {
             Console.WriteLine("...We have just used the Quit method implemented by the Employee class!");

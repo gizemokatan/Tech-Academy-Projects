@@ -10,24 +10,15 @@ namespace Interfaces1
     {
         static void Main(string[] args)
         {
-            // Instantiate an Employee object
-            Employee employee = new Employee
-            {
-                FirstName = "Sample ",
-                LastName = "Student"
-            };
-            Console.WriteLine("This is an example of a virtual method being called...");
-            // Call the SayName() method on the Employee object
-            employee.SayName();
-
             // Use polymorphism to create an object of type IQuittable
-            IQuittable employee1 = new Employee()
+            IQuittable employee = new Employee()
             {
                 FirstName = "John ",
                 LastName = "Doe"
             };
-            Console.WriteLine("Using the employee1 object of type IQuittable...");
-            employee1.Quit();
+            Console.WriteLine("Using the employee object of type IQuittable...");
+            // Call the Quit method
+            employee.Quit();
         }
     }
 }
