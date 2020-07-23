@@ -20,6 +20,7 @@ namespace CarInsurance.Controllers
             return View(db.Insurees.ToList());
         }
 
+        // Create Admin method to view the list of all Db entries.
         public ActionResult Admin()
         {
             return View(db.Insurees.ToList());
@@ -41,11 +42,11 @@ namespace CarInsurance.Controllers
         }
 
         // GET: Insuree/Create
+        // This is viewing just the form.
         public ActionResult Create()
         {
             return View();
         }
-
 
         // POST: Insuree/Create
         // To protect from overposting attacks, enable the specific properties you want to bind to, for 
@@ -59,7 +60,8 @@ namespace CarInsurance.Controllers
                 insuree = GetQuote(insuree);
                 db.Insurees.Add(insuree);
                 db.SaveChanges();
-                return RedirectToAction("Index");
+                return View(insuree);
+                //return RedirectToAction("Index");
             }
 
             return View(insuree);
