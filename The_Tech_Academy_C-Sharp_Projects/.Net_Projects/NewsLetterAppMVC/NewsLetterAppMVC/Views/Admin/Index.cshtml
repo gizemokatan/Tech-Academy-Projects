@@ -1,0 +1,43 @@
+﻿@using NewsLetterAppMVC.ViewModels
+@model List<SignupVm>
+
+<div class="row no-gutters m-3">
+    <div class="card col-sm-12 col-md-10 col-lg-6 mx-auto shadow">
+        <div class="card-header text-center">
+            <h5 class="m-0">Sign-ups</h5>
+        </div>
+        <div class="card-body">
+            @*Display one row per newsletter sign-up.
+        Loop through the list and create a row for each sign-up. *@
+            @*Our Model is a list.*@
+            @foreach (var signup in Model)
+            {
+                @*Using the Razor helper method, we call the Unsubscribe() method inside the AdminController*@
+            using (Html.BeginForm("Unsubscribe", "Admin", FormMethod.Post))
+            {
+                    //In forms to add values you use the input tag.
+                    //The name attribute gets assigned as Id cause its the parameter for the Unsubscribe method.
+                    <input type="hidden" name="Id" value="@signup.Id" />
+                    <div class="row mb-3">
+                        <div class="col-2">
+                            @signup.FirstName
+                        </div>
+                        <div class="col">
+                            @signup.LastName
+                        </div>
+                        <div class="col-4">
+                            @signup.EmailAddress
+                        </div>
+                        <div class="col">
+                            <button type="submit" class="btn btn-danger btn-block">
+                                Unsubscribe
+                            </button>
+                        </div>
+                    </div>
+                }
+
+            }
+        </div>
+    </div>
+</div>
+
