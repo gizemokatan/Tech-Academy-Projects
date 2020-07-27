@@ -9,6 +9,8 @@ namespace ContosoUniversity.DAL
 {
     public class SchoolInitializer : System.Data.Entity. DropCreateDatabaseIfModelChanges<SchoolContext>
     {
+        /* When you ran the Students page and the application tried to access the database, EF discovered that there was 
+         * no database and created one. EF then ran the seed method to populate the database with data. */
         protected override void Seed(SchoolContext context)
         {
             var students = new List<Student>
