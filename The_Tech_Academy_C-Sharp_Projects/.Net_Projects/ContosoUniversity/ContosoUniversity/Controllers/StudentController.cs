@@ -6,8 +6,10 @@ using System.Linq;
 using System.Net;
 using System.Web;
 using System.Web.Mvc;
+using System.Web.UI;
 using ContosoUniversity.DAL;
 using ContosoUniversity.Models;
+using PagedList;
 
 namespace ContosoUniversity.Controllers
 {
@@ -16,10 +18,69 @@ namespace ContosoUniversity.Controllers
         private SchoolContext db = new SchoolContext();
 
         // GET: Student
-        public ActionResult Index()
+        /* The first time the page is displayed, or if the user hasn't clicked a paging or sorting link, all the 
+         * parameters are null. If a paging link is clicked, the page variable contains the page number to display. */
+        public ViewResult Index(string sortOrder, string currentFilter, string searchString, int? page)
         {
-            return View(db.Students.ToList());
+            /* The two ViewBag variables are used so that the view can configure the column 
+             * heading hyperlinks with the appropriate query string values: */
+            /* A ViewBag property provides the view with the current sort order, because this must be included in 
+             * the paging links in order to keep the sort order the same while paging. */
+            ViewBag.CurrentSort = sortOrder;
+            ViewBag.NameSortParm = String.IsNullOrEmpty(sortOrder) ? "name_desc" : "";
+            ViewBag.DateSortParm = sortOrder == "Date" ? "date_desc" : "";
+            /* Above are ternary statements. The first one specifies that if the sortOrder parameter is null or empty, 
+             * ViewBag.NameSortParm should be set to "name_desc"; otherwise, it should be set to an empty string.*/
+            if (searchString != null)
+            {
+                page = 1;
+            }
+            else
+            {
+                searchString = currentFilter;
+            }
+            ViewBag.CurrentFilter = searchString;
+
+            var students = from s in db.Students
+                          select s;
+            /* The code adds a searchString parameter to the Index method. It also adds a where clause to the LINQ statement
+             * that selects only students whose first name or last name contains the search string. The statement 
+             * that adds the Where clause executes only if there's a value to search for. */
+            if (!String.IsNullOrEmpty(searchString))
+            {
+                students = students.Where(s => s.LastName.Contains(searchString)
+                                        || s.FirstMidName.Contains(searchString));
+            }
+            switch (sortOrder)
+            {
+                case "name_desc":
+                    students = students.OrderByDescending(s => s.LastName);
+                    break;
+                case "Date":
+                    students = students.OrderBy(s => s.EnrollmentDate);
+                    break;
+                case "date_desc":
+                    students = students.OrderByDescending(s => s.EnrollmentDate);
+                    break;
+                default:
+                    students = students.OrderBy(s => s.LastName);
+                    break;
+            }
+
+            /* The ToPagedList extension method on the students IQueryable object converts the student query to a single page 
+             * of students in a collection type that supports paging. That single page of students is then passed to the view: */
+            int pageSize = 3;
+            int pageNumber = (page ?? 1);
+            /* The ToPagedList method takes a page number. The two question marks represent the null-coalescing operator. 
+             * The null-coalescing operator defines a default value for a nullable type; the expression (page ?? 1) means return
+             * the value of page if it has a value, or return 1 if page is null. */
+            return View(students.ToPagedList(pageNumber, pageSize));
         }
+        /* The method above uses LINQ to Entities to specify the column to sort by. The code creates an IQueryable<T> variable 
+         * before the switch statement, modifies it in the switch statement, and calls the ToList method after the switch statement. 
+         * When you create and modify IQueryable variables, no query is sent to the database. The query is not executed until 
+         * you convert the IQueryable object into a collection by calling a method such as ToList. Therefore, this code results 
+         * in a single query that is not executed until the return View statement. */
 
         // GET: Student/Details/5
         public ActionResult Details(int? id)
