@@ -5,6 +5,8 @@
     
     public partial class InitialCreate : DbMigration
     {
+        /* The update-database command runs the Up method to create the database and then it 
+         * runs the Seed method to populate the database. */
         public override void Up()
         {
             CreateTable(
