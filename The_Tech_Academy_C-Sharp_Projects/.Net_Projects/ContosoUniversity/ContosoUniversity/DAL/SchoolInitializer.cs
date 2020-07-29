@@ -10,7 +10,11 @@ namespace ContosoUniversity.DAL
     public class SchoolInitializer : System.Data.Entity. DropCreateDatabaseIfModelChanges<SchoolContext>
     {
         /* When you ran the Students page and the application tried to access the database, EF discovered that there was 
-         * no database and created one. EF then ran the seed method to populate the database with data. */
+         * no database and created one. EF then ran the Seed method to populate the database with data. */
+
+        /* The Seed method takes the database context object as an input parameter, and the code in the method uses that 
+         * object to add new entities to the database. For each entity type, the code creates a collection of new entities, 
+         * adds them to the appropriate DbSet property, and then saves the changes to the database. */
         protected override void Seed(SchoolContext context)
         {
             var students = new List<Student>

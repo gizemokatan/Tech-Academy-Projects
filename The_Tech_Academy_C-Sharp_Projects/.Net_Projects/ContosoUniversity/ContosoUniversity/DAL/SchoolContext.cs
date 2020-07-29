@@ -4,6 +4,9 @@ using System.Data.Entity.ModelConfiguration.Conventions;
 
 namespace ContosoUniversity.DAL
 {
+    /* The main class that coordinates Entity Framework functionality for a given data model is the database context class. 
+     * You create this class by deriving from the System.Data.Entity.DbContext class. In your code, you specify which entities 
+     * are included in the data model. */
     public class SchoolContext : DbContext
     {
         /* This code creates a DbSet property for each entity set. In Entity Framework terminology, 
