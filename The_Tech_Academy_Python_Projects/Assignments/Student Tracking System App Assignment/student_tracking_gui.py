@@ -42,11 +42,6 @@ def load_gui(self):
     # Define a listbox with a scrollbar and grid them
     self.scrollbar1 = Scrollbar(self.master,orient=VERTICAL)
     self.lstList1 = Listbox(self.master,exportselection=0,yscrollcommand=self.scrollbar1.set)
-    # Bind an event to our listbox; create an event listener
-    # If a user selects/clicks on an object within our list, call our function 'onSelect()'
-    # in student_tracking_func module.
-    # A bound event, needs to know the event, so we must pass in the 'event', as well as the key 'self'.
-##    self.lstList1.bind('<<ListboxSelect>>',lambda event: student_tracking_func.onSelect(self,event))
     self.scrollbar1.config(command=self.lstList1.yview)
     self.scrollbar1.grid(row=1,column=5,rowspan=9,columnspan=1,padx=(0,0),pady=(0,0),sticky=N+E+S)
     self.lstList1.grid(row=1,column=2,rowspan=9,columnspan=3,padx=(0,0),pady=(0,0),sticky=N+E+S+W)

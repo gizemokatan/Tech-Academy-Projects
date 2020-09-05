@@ -73,11 +73,12 @@ def addToList(self):
             if chkphone == 0:
                 print("chkphone: {}".format(chkphone))
                 cur.execute("""INSERT INTO tbl_student_tracking (col_fname,col_lname,col_phone,col_email,col_course) VALUES (?,?,?,?,?)""",(var_fname,var_lname,var_phone,var_email,var_course))
-                self.lstList1.insert(END, "======================", var_fname, var_lname, var_phone, var_email, var_course)
+                self.lstList1.insert(END, var_fname + " | " + var_lname + " | " + var_phone + " | " + var_email + " | " + var_course)
                 onClear(self)
             else:
                 messagebox.showerror("Name Error","'{} {}' already exists in the database! Please choose a different name.".format(var_fname,var_lname))
                 onClear(self)
+        
         conn.commit()
         conn.close()
     else:
@@ -93,39 +94,45 @@ def onClear(self):
     self.txt_course.delete(0,END)
 
 
-# function to delete entry from dB
 def onDelete(self):
-    # Listbox selected tuple
-    var_select = self.lstList1.get(self.lstList1.curselection())
-    conn = sqlite3.connect('db_student_tracking.db')
-    with conn:
-        cur = conn.cursor()
-        cur.execute("""SELECT COUNT(*) FROM tbl_student_tracking""")
-        count = cur.fetchone()[0]
-        if count > 1:
-            confirm = messagebox.askokcancel("Delete Confirmation", "All information associated with, ({}) \nwill be permenantly deleted from the database. \n\nProceed with the deletion request?".format(var_select))
-            if confirm:
-                cur.execute("""DELETE FROM tbl_student_tracking WHERE col_fname = '{}'""".format(var_select))
-                onDeleted(self)
-                conn.commit()
-        else:
-            confirm = messagebox.showerror("Last Record Error", "({}) is the last record in the database and cannot be deleted at this time. \n\nPlease add another record first before you can delete ({}).".format(var_select,var_select))
-    conn.close()
-    
-
-def onDeleted(self):
     # clear the text in these textboxes
     self.txt_fname.delete(0,END)
     self.txt_lname.delete(0,END)
     self.txt_phone.delete(0,END)
     self.txt_email.delete(0,END)
     self.txt_course.delete(0,END)
-    try:
-        # deletes the index associated to the data within the dB
-        index = self.lstList1.curselection()[0]
-        self.lstList1.delete(index-1,index+4)
-    except IndexError:
-        pass
+
+    var_select = self.lstList1.get(self.lstList1.curselection())
+
+    # deletes the lineNumber associated to the data within the dB
+    lineNumber = self.lstList1.curselection()[0]
+    self.lstList1.delete(lineNumber)
+
+##    print("selected: ", var_select)
+    conn = sqlite3.connect('db_student_tracking.db')
+    with conn:
+        cur = conn.cursor()
+        cur.execute("""SELECT * FROM tbl_student_tracking""")
+        records = cur.fetchall()
+        listOfIDs = []
+        for row in records:
+            listOfIDs.append(row[0])
+##        print(listOfIDs)
+            
+        cur.execute("""SELECT COUNT(*) FROM tbl_student_tracking""")
+        count = cur.fetchone()[0]
+        if count > 1:
+            confirm = messagebox.askokcancel("Delete Confirmation", "All information associated with, ({}) \nwill be permenantly deleted from the database. \n\nProceed with the deletion request?".format(var_select))
+            if confirm:
+                cur.execute("""DELETE FROM tbl_student_tracking WHERE ID = '{}'""".format(listOfIDs[lineNumber]))
+                conn.commit()
+        else:
+            confirm = messagebox.showerror("Last Record Error", "({}) is the last record in the database and cannot be deleted at this time. \n\nPlease add another record first before you can delete ({}).".format(var_select,var_select))
+       
+    conn.commit()
+    conn.close()
+
+
     
 
 # Populate the listbox, coinciding with data in the dB
@@ -142,18 +149,22 @@ def onRefresh(self):
         count = len(cur.fetchall())
         print(count)
         i = 0
+        entryList = []
         # as long as our count is greater than 0
         while i < count:
             cur.execute("""SELECT col_fname,col_lname,col_phone,col_email,col_course FROM tbl_student_tracking""")
             # varList is a row in dB
             varList = cur.fetchall()[i]
             # iterate backwards through items in list
-            for item in reversed(varList):
-                self.lstList1.insert(0,str(item))
-            self.lstList1.insert(0, "======================")
+            for item in varList:
+                entryList.append(item)
+            entryListStr = ' | '.join(entryList)
+            self.lstList1.insert(END,entryListStr)
+            entryList.clear()
             # allows us to go to the next row in dB
             i = i + 1
     conn.close()
+    
     
     
     

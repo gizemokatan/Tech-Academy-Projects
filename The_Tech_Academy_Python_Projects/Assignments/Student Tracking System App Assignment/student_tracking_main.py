@@ -24,12 +24,10 @@ class ParentWindow(Frame):
         self.master = master
         # Set the window size Height, Width in pixels
         self.master.minsize(500,300)
-##        self.master.maxsize(700,400)
         # This CenterWindow method will center our app on the user's screen
         student_tracking_func.center_window(self,500,400)
         self.master.title("Student Tracking")
         self.master.config(bg="lightblue")
-##        self.master.protocol("WM_DELETE_WINDOW", lambda: student_tracking_func.ask_quit(self))
 
         # Load in the GUI widgets from a seperate module,
         # keeping your code compartmentalized and clutter free.
