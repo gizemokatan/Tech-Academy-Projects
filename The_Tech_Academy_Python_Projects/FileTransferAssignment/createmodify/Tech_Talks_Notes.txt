@@ -1,0 +1,100 @@
+﻿Tech Talks
+=========================================================
+
+May 15 2020
+Speaker: Sarabjeet 'Saby' Waraich
+-project manager
+--leading remote teams during these challenging times
+--great time to build a network, learn a new skill, help those that need it - now, 
+linkedin.com/in/waraich
+
+=========================================================
+
+May 19 2020 
+Microsoft Talk
+Speakers: 
+Carolina Morgado; Tompkins Conservation Chile National Parks
+Luli Masera; Rewilding Argentina
+
+Emails: 
+carolina.morgado@tompkinsconservation.org  
+lmasera@gmail.com
+
+-they propose new national parks
+-why parks? they are the most durable
+-tourism is a consequence of conservation
+-Restoration needed; extinction happens by the hour!
+
+========================================================
+
+May 22 2020:
+Christopher Thompson
+Topic: The Art of Self-Study: Tips from a Lifelong Learner
+
+-need systems and need to stay sharp
+-follow-through is one of the hardest things to do in this age of information
+
+Systems/organization:
+-cycles: break down your goals into time periods, each period has a goal within it, and then concentrate on the smallest units (days, hours, minutes)
+-use physical calendars (the act of writing it down commits it to memory), use apps to set reminders, scratch pad to write down ideas
+
+Calendars:
+-same time every week
+-look over the next week
+-use symbolism for different tasks
+-be specific (workout ---> yoga and time alloted for it)
+-highlight accomplishments
+-use exact time!
+
+Environment:
+-less is more
+-make it comfortable, not cozy
+-seperate from tv, kitchen
+-near a window
+-phone; put all necessary apps on home screen and delete unecessary apps
+-computers; undo automatic logins to sites you like to visit frequently (social media)
+
+Physical & mental:
+-daily meditation, positive self-talk
+-filter your news
+-listen to positive music
+-smile more, complain less
+-get enough sleep 
+-cut yourself slack
+
+
+========================================================
+
+July 3 2020
+Shay Tebbs
+stebbs@solutionstream.com
+
+
+Resume:
+-resume keywords are a must
+-highlight projects, showcase code
+-if switching careers, putting the last job is fine
+-instead of a cover letter, a summary is more commonly read by HR include in your summary: (what you want to accomplish, why switching industries, personality, and top skills)
+
+Outreach:
+-Connect with your favorite companies by finding recruiters/HR and send messages on Linkedin!!!
+
+-Women Who Code Job Board
+-If you have 70% of the skills, apply
+
+========================================================
+
+July 31st 2020
+Dr. Brent Wilson
+bwilson@georgefox.edu
+Professor of Computer Science & Cyber Security at George Fox University
+"Why coding is only half the answer (the importance of algorithms)"
+
+-How to master your profession:
+The difference bt a seasoned programmer and junior: a junior looks for any solution, a senior looks for the best solution.
+
+
+-logrithms
+-anagrams ex: python and typhon (given two strings that have the exact same characters, how would you solve it)
+-permutation (a solution for small data but doesn't scale for large data)
+
