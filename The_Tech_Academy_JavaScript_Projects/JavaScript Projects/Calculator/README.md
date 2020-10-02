@@ -1,1 +1,1 @@
-I designed calculator to practice my CSS and JavaScript skills.
+I designed a calculator to practice my CSS and JavaScript skills.
