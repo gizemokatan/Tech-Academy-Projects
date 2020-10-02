@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>RoundTable JS Challenge</title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <h3>Given a total due and an array representing the amount of change in your pocket, determine whether or not you are able to pay for the item. 
+            Change will always be represented in the following order: quarters, dimes, nickels, pennies.</h3>
+        <h4>Change: [30, 40, 20, 5]</h4>
+        <h4>Item cost: 10.55</h4>
+        <p id="demo"></p>
+        <script>
+            myFunction([30, 40, 20, 5], 10.55);
+
+            function myFunction(pocketChg, itemCost) {
+                var chgTotals = [];
+                for (var i = 0; i < pocketChg.length; i++){
+                    if (i == 0) {
+                        q = pocketChg[i] * .25;
+                        chgTotals[0] = q;
+                    }
+                    if (i == 1) {
+                        d = pocketChg[i] * .10;
+                        chgTotals[1] = d;
+                    }
+                    if (i == 2) {
+                        n = pocketChg[i] * 0.05;
+                        chgTotals[2] = n;
+                    }
+                    if (i == 3) {
+                        p = pocketChg[i] * 0.01;
+                        chgTotals[3] = p;
+                    }
+                }
+                console.log(chgTotals);
+
+                var sum = 0;
+                for (var i in chgTotals) {
+                    sum += chgTotals[i];
+                }
+                var canBuy;
+                if (sum >= itemCost) {
+                    canBuy = "true";
+                }
+                else {
+                    canBuy = "false";
+                }
+                console.log(canBuy);
+                document.getElementById("demo").innerHTML = canBuy;
+            }
+        </script>
+    </body>
+</html>
