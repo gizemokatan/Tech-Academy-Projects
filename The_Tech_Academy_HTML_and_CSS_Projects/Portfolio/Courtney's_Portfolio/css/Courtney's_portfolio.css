@@ -313,7 +313,7 @@ body {
 }
 
 /* Heading 1 elements */
-h1 {
+h1, h2 {
 	font-family: Verdana, Geneva, Tahoma;
 	text-align: center;
 	/* Small margin above the headings */
@@ -483,3 +483,5 @@ footer {
 	padding: 2%;
 	background-color: white;
 }
+
+
